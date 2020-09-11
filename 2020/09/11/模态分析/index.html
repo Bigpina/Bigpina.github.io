@@ -156,7 +156,31 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>步骤1：导入模型<br>File&gt;Import&gt;PARA..选择x_t文件。或使用命令流~parain,TransducerDown,x_t,,solid,0,0<br>步骤2：重生成模型<br>PlotCtrls&gt;style&gt;Solid Model facets&gt;Normal Facets<br>步骤3：输入参数<br>设置材料属性，复制命令流到Ansys中，设置好材料和网格参数，根据不同材料参数不同<br>et,1,solid5       设置一号材料网格<br>mp,ex,1,7.65e10   弹性模量<br>mp,prxy,1,0.32    泊松比<br>mp,dens,1,7.8e3   密度<br>步骤4：划分网格<br>1）Preprocesser&gt;Modeling&gt;Opreation&gt;Glue&gt;Volumes&gt;Pick All 将模型粘接到一起<br><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/1.PNG" alt><br>2)Proprecesser&gt;Meshing&gt;Meshtool,在Element Attributes里选择volumes&gt;set,选择物体，点击apply<br><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/2.PNG" alt><br>在Volume Attributtes中选择2号材料，solid 45单元，点击apply<br><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/3.PNG" alt><br>重复上述操作对其他物体进行设置<br>3）Proprecesser&gt;Meshing&gt;Meshtool进行网格划分，选择六面体单元，依次选择内圈和外圈，分成30份<br><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/4.PNG" alt><br>在进行内圈和外圈的选择时，可长按鼠标并滑动进行选择<br><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/5.PNG" alt><br>最后sweep，选择陶瓷<br><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/6.PNG" alt></p>
+                <p>步骤1：导入模型<br>File&gt;Import&gt;PARA..选择x_t文件。或使用命令流~parain,TransducerDown,x_t,,solid,0,0<br>步骤2：重生成模型<br>PlotCtrls&gt;style&gt;Solid Model facets&gt;Normal Facets<br>步骤3：输入参数<br>设置材料属性，复制命令流到Ansys中，设置好材料和网格参数，根据不同材料参数不同<br>et,1,solid5       设置一号材料网格<br>mp,ex,1,7.65e10   弹性模量<br>mp,prxy,1,0.32    泊松比<br>mp,dens,1,7.8e3   密度<br>步骤4：划分网格<br>1）Preprocesser&gt;Modeling&gt;Opreation&gt;Glue&gt;Volumes&gt;Pick All 将模型粘接到一起</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/1.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/1.PNG" alt><br>2)Proprecesser&gt;Meshing&gt;Meshtool,在Element Attributes里选择volumes&gt;set,选择物体，点击apply</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/2.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/2.PNG" alt><br>在Volume Attributtes中选择2号材料，solid 45单元，点击apply</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/3.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/3.PNG" alt><br>重复上述操作对其他物体进行设置<br>3）Proprecesser&gt;Meshing&gt;Meshtool进行网格划分，选择六面体单元，依次选择内圈和外圈，分成30份</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/4.png" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/4.png" alt><br>在进行内圈和外圈的选择时，可长按鼠标并滑动进行选择</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/5.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/5.PNG" alt><br>最后sweep，选择陶瓷</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/6.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/6.PNG" alt><br>此时，陶瓷的网格已划分完成。<br>6）Plot&gt;Volumes,调出整个物体，Proprecesser&gt;Meshing&gt;Meshtool，对物体进行自由划分</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/7.PNG" class> <img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/8.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/7.PNG" alt>   <img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/8.PNG" alt><br>7）细化网格，对物体采用线划分，圆分成30份，高分成20份，注意选择时要选择上下两圆，及两条侧边的高线</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/9.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/9.PNG" alt><br>划分后结果如上图所示。<br>8）接下来对底座进行划分网格，先自由划分，再对网格进行线切割，使网格规整。<br>步骤5：施加载荷<br>1）先选择节点，Select&gt;entities&gt;areas&gt;OK&gt;选择底面&gt;OK</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/10.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/10.PNG" alt><br>2)Plot&gt;areas,再Preprocessor&gt;Define Loads&gt;Apply&gt;Structural&gt;Displacement&gt;On Nodes<br>框选所有节点，施加载荷，<br>选择ALL DOF，限制自由度</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/12.PNG" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/12.PNG" alt><br>如图所示</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/11.png" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/11.png" alt><br>3)重复上述操作，选择陶瓷五个面，设置电压为0</p>
+<img src="/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/11.png" class>
+<p><img src="/Bigpina.github.io/Bigpina/Bigpina.github.io/2020/09/11/%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90/11.png" alt></p>
 
             </div>
 
