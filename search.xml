@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>WIN11添加过时硬件“Microsoft KM-TEST环回适配器”</title>
+      <link href="/posts/2fae4cea.html"/>
+      <url>/posts/2fae4cea.html</url>
+      
+        <content type="html"><![CDATA[<span id="more"></span><hr><h3 id="1-使用“WIN＋R”调出命令提示符，并输入“hdwwiz”"><a href="#1-使用“WIN＋R”调出命令提示符，并输入“hdwwiz”" class="headerlink" title="1.使用“WIN＋R”调出命令提示符，并输入“hdwwiz”"></a>1.使用“WIN＋R”调出命令提示符，并输入“hdwwiz”</h3><p><img src="/posts/2fae4cea/cmd.png"></p><h3 id="2-弹出添加硬件向导窗口，下一步"><a href="#2-弹出添加硬件向导窗口，下一步" class="headerlink" title="2.弹出添加硬件向导窗口，下一步"></a>2.弹出添加硬件向导窗口，下一步</h3><p><img src="/posts/2fae4cea/picture1.png"></p><h3 id="3-选择“安装我手动从列表选择的硬件”，下一步"><a href="#3-选择“安装我手动从列表选择的硬件”，下一步" class="headerlink" title="3.选择“安装我手动从列表选择的硬件”，下一步"></a>3.选择“安装我手动从列表选择的硬件”，下一步</h3><p><img src="/posts/2fae4cea/picture2.png"></p><h3 id="4-选择“网络适配器”，下一步"><a href="#4-选择“网络适配器”，下一步" class="headerlink" title="4.选择“网络适配器”，下一步"></a>4.选择“网络适配器”，下一步</h3><p><img src="/posts/2fae4cea/picture3.png"></p><h3 id="5-在左侧找到“Micorsoft”，右侧选择“Microsoft-KM-TEST环回适配器”，下一步"><a href="#5-在左侧找到“Micorsoft”，右侧选择“Microsoft-KM-TEST环回适配器”，下一步" class="headerlink" title="5.在左侧找到“Micorsoft”，右侧选择“Microsoft KM-TEST环回适配器”，下一步"></a>5.在左侧找到“Micorsoft”，右侧选择“Microsoft KM-TEST环回适配器”，下一步</h3><p><img src="/posts/2fae4cea/picture4.png"></p><h3 id="6-等待下载完成"><a href="#6-等待下载完成" class="headerlink" title="6.等待下载完成"></a>6.等待下载完成</h3><p><img src="/posts/2fae4cea/picture6.png"></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>星-三角启动</title>
+      <link href="/posts/81c86f89.html"/>
+      <url>/posts/81c86f89.html</url>
+      
+        <content type="html"><![CDATA[<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 电工电子 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C#运动控制及界面开发</title>
+      <link href="/posts/682b50d5.html"/>
+      <url>/posts/682b50d5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、硬件"><a href="#一、硬件" class="headerlink" title="一、硬件"></a>一、硬件</h1><p>电机、驱动器、板卡</p><h1 id="二、软件"><a href="#二、软件" class="headerlink" title="二、软件"></a>二、软件</h1><p>XCOM</p><h1 id="三、编程"><a href="#三、编程" class="headerlink" title="三、编程"></a>三、编程</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>VS 2019</p><h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><p>.cs:<br>.dll:<br>winform:</p><h2 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h2><p>button：按钮<br>panel：面板<br>text：文本<br>label：标签</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工控 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RobotStudio基础</title>
+      <link href="/posts/9d614237.html"/>
+      <url>/posts/9d614237.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="2023年8月6日"><a href="#2023年8月6日" class="headerlink" title="2023年8月6日"></a>2023年8月6日</h2><h3 id="1-RS中Smart组件添加直线传感器"><a href="#1-RS中Smart组件添加直线传感器" class="headerlink" title="1.RS中Smart组件添加直线传感器"></a>1.RS中Smart组件添加直线传感器</h3><p>（1）编辑Smart组件<br>（2）添加linesensor（直线传感器），更改传感器属性<br>（3）拖动linesensor至Smart组件中工装夹具上；弹出是否更改传感器位置，选“否”</p><h3 id="2-导入多个工件后，夹具工作时多个工件会一起运动"><a href="#2-导入多个工件后，夹具工作时多个工件会一起运动" class="headerlink" title="2.导入多个工件后，夹具工作时多个工件会一起运动"></a>2.导入多个工件后，夹具工作时多个工件会一起运动</h3><p>取消工装夹具的可由传感器检测功能</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工控 </tag>
+            
+            <tag> ABB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown技巧</title>
+      <link href="/posts/f3de4c07.html"/>
+      <url>/posts/f3de4c07.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-星号成对使用"><a href="#1-星号成对使用" class="headerlink" title="1. 星号成对使用"></a>1. 星号成对使用</h2><ol><li><p>* * 和_ _内的文本会被转换为斜体</p></li><li><p>** ** 或 __ __ 内的文本会被加粗（相邻符号内不能有空格）</p></li><li><p>在第一个符号前加入反斜杠 “ \ ”，取消特殊格式</p></li></ol><h2 id="2-表格"><a href="#2-表格" class="headerlink" title="2. 表格"></a>2. 表格</h2><table><thead><tr><th>name1</th><th>name2</th></tr></thead><tbody><tr><td>num</td><td>name</td></tr></tbody></table><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第2章 这不是Bug，而是语言特性</title>
+      <link href="/posts/5e3708b8.html"/>
+      <url>/posts/5e3708b8.html</url>
+      
+        <content type="html"><![CDATA[<p>《C专家编程》</p><span id="more"></span><h2 id="2-1-语言缺陷"><a href="#2-1-语言缺陷" class="headerlink" title="2.1 语言缺陷"></a>2.1 语言缺陷</h2><p>类型1：多做之过<br>类型2：少做之过<br>类型3：误做之过</p><h2 id="2-2-多做之过"><a href="#2-2-多做之过" class="headerlink" title="2.2 多做之过"></a>2.2 多做之过</h2><h3 id="2-2-1-switch语句中的“fall-through”带来的问题"><a href="#2-2-1-switch语句中的“fall-through”带来的问题" class="headerlink" title="2.2.1 switch语句中的“fall through”带来的问题"></a>2.2.1 switch语句中的“fall through”带来的问题</h3><ol><li><p>case语句后需要添加break结束switch的命令执行。</p></li><li><p>break中断了整个switch函数的执行，跳出了switch函数结构。</p></li></ol><h3 id="2-2-2-粉笔也成了可用硬件"><a href="#2-2-2-粉笔也成了可用硬件" class="headerlink" title="2.2.2 粉笔也成了可用硬件"></a>2.2.2 粉笔也成了可用硬件</h3><blockquote><p>在修饰变量的时候,static修饰的静态局部变量只执行一次初始化</p></blockquote><p>字符串数组两个字符串成员之间需要添加逗号，否则两个成员会自动合并为一个成员，引发问题。</p><h3 id="2-2-3-太多的缺省可见性"><a href="#2-2-3-太多的缺省可见性" class="headerlink" title="2.2.3 太多的缺省可见性"></a>2.2.3 太多的缺省可见性</h3><p>无论是否有extern关键字，函数在任何地方均可以访问</p><p>添加static关键字可以限制文件对函数的访问</p><h2 id="2-3-误做之过"><a href="#2-3-误做之过" class="headerlink" title="2.3 误做之过"></a>2.3 误做之过</h2><p>与C语言的简洁和操作符的优先级有关</p><h3 id="2-3-1-骆驼背上的重载"><a href="#2-3-1-骆驼背上的重载" class="headerlink" title="2.3.1 骆驼背上的重载"></a>2.3.1 骆驼背上的重载</h3><p>字符的过度使用、C语言中的符号重载</p><p>例：*</p><ol><li>乘法运算符</li><li>用于指针，间接引用</li><li>在声明中，表示指针</li></ol><p>sizeof(int) * p 中 <code>*</code>为乘法运算符；</p><h3 id="2-3-2-“某些运算符的优先级是错误的”"><a href="#2-3-2-“某些运算符的优先级是错误的”" class="headerlink" title="2.3.2 “某些运算符的优先级是错误的”"></a>2.3.2 “某些运算符的优先级是错误的”</h3><table><thead><tr><th align="left">优先级问题</th><th align="left">表达式</th><th align="left">人们可能误认为的结果</th><th align="left">实际结果</th></tr></thead><tbody><tr><td align="left">.的优先级高于* <br> -&gt;操作符用于消除这个问题</td><td align="left">*p.f</td><td align="left">p所指对象的字段f <br> (*p).f</td><td align="left">对p取f偏移，作为指针，然后进行解除引用操作。<br>*(p.f)</td></tr><tr><td align="left">[]高于*</td><td align="left">int *ap[]</td><td align="left">ap是指向int数组的指针int(*ap)[]</td><td align="left">ap是元素为int指针的数组 <br> int *(ap[])</td></tr><tr><td align="left">函数()高于*</td><td align="left">int *fp()</td><td align="left">fp是个函数指针，所指函数返回int。int(*fp)()</td><td align="left">fp是个函数，返回int* <br> int *(fp())</td></tr><tr><td align="left">&#x3D;&#x3D;和!&#x3D;高于位操作符</td><td align="left">(val &amp; mask !&#x3D; 0)</td><td align="left">(val &amp; mask) !&#x3D; 0</td><td align="left">val &amp; (mask !&#x3D; 0)</td></tr><tr><td align="left">&#x3D;&#x3D;和!&#x3D;高于赋值符</td><td align="left">c&#x3D; getchar() !&#x3D; EOF</td><td align="left">(c&#x3D; getchar()) !&#x3D; EOF</td><td align="left">c&#x3D; (getchar() !&#x3D; EOF)</td></tr><tr><td align="left">算术运算高于位移运算符</td><td align="left">msb &lt;&lt; 4 + lsb</td><td align="left">(msb &lt;&lt; 4) + lsb</td><td align="left">msb &lt;&lt; (4 + lsb)</td></tr><tr><td align="left">逗号运算符在所有运算符中优先级最低</td><td align="left">i &#x3D; 1, 2</td><td align="left">i &#x3D; (1, 2)</td><td align="left">(i &#x3D; 1), 2</td></tr></tbody></table><h4 id="优先级："><a href="#优先级：" class="headerlink" title="优先级："></a>优先级：</h4><p>乘法和除法先于加法和减法，在涉及其他操作符时一律加上括号。</p><h4 id="结合性"><a href="#结合性" class="headerlink" title="结合性"></a>结合性</h4><p>结合性只用于表达式中出现两个以上相同优先级的操作符的情况，所有的赋值符（包括复合赋值符）都具有右结合性，从右向左依次执行。左结合性的操作符：”&amp;”和”|”</p><h3 id="2-3-2-早期gets-中的bug导致了internet蠕虫"><a href="#2-3-2-早期gets-中的bug导致了internet蠕虫" class="headerlink" title="2.3.2 早期gets()中的bug导致了internet蠕虫"></a>2.3.2 早期gets()中的bug导致了internet蠕虫</h3><p><img src="/posts/5e3708b8/2.3.1.jpg"></p><h2 id="2-4-少做之过"><a href="#2-4-少做之过" class="headerlink" title="2.4 少做之过"></a>2.4 少做之过</h2><h3 id="2-4-1-若用户名中有f，便收不到邮件"><a href="#2-4-1-若用户名中有f，便收不到邮件" class="headerlink" title="2.4.1 若用户名中有f，便收不到邮件"></a>2.4.1 若用户名中有f，便收不到邮件</h3><p>引起该错误的主要是由于系统对’-‘符号的糟糕解析，系统分不清该符号是是选项开关还是文件名。</p><h3 id="2-4-2-空格——最后的领域"><a href="#2-4-2-空格——最后的领域" class="headerlink" title="2.4.2 空格——最后的领域"></a>2.4.2 空格——最后的领域</h3><ul><li>使用”&quot;字符对一些字符进行转义时，”&quot;与字符间不能有空格</li><li>也不可将所有的空格弃之不用</li></ul><p>例：z &#x3D; y+++x |可以是z &#x3D; y++ +x 或 z &#x3D; y+ ++x</p><ul><li>使用两个指针执行除法运算</li></ul><p>例：ratio &#x3D; *x&#x2F;<em>y |由于缺少空格”&#x2F;</em>“被认为是注释符号</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第2章 算法</title>
+      <link href="/posts/ef905eca.html"/>
+      <url>/posts/ef905eca.html</url>
+      
+        <content type="html"><![CDATA[<p>《大话数据结构》</p><span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且每条指令表示一个或多个操作。</p><h2 id="2-1算法的特性"><a href="#2-1算法的特性" class="headerlink" title="2.1算法的特性"></a>2.1算法的特性</h2><blockquote><p>基本特性：输入、输出、有穷性、确定性和可行性</p></blockquote><h3 id="2-1-1-输入输出"><a href="#2-1-1-输入输出" class="headerlink" title="2.1.1 输入输出"></a>2.1.1 输入输出</h3><p>算法具有零个或多个输入，至少具有一个或多个输出</p><h3 id="2-1-2-有穷性"><a href="#2-1-2-有穷性" class="headerlink" title="2.1.2 有穷性"></a>2.1.2 有穷性</h3><p>算法在执行有限的步骤后，自然结束而不会出现无限循环，并且每一个步骤在可接受的时间内完成。</p><h3 id="2-1-3-确定性"><a href="#2-1-3-确定性" class="headerlink" title="2.1.3 确定性"></a>2.1.3 确定性</h3><p>算法的每一步骤都具有确定的含义，不会出现二义性</p><h3 id="2-1-4"><a href="#2-1-4" class="headerlink" title="2.1.4"></a>2.1.4</h3><p>算法的每一步都必须是可行的，也就是说，每一步都能通过执行有限次数完成。</p><h2 id="2-2-算法设计要求"><a href="#2-2-算法设计要求" class="headerlink" title="2.2 算法设计要求"></a>2.2 算法设计要求</h2><blockquote><p>正确性、可读性、健壮性、时间效率高和存储量低</p></blockquote><h3 id="2-2-1-正确性"><a href="#2-2-1-正确性" class="headerlink" title="2.2.1 正确性"></a>2.2.1 正确性</h3><p>算法至少具有输入、输出和加工处理无歧义性，能正确反映问题需求，能够得到问题的正确答案。</p><p>算法层次：<br>（1）算法程序没有语法错误<br>（2）算法程序对于合法的输入数据能够产生满足要求的输出结果<br>（3）算法程序对于非法的输入数据能够得出满足规格要求的结果<br>（4）算法程序对于精心选择的，甚至刁难的测试数据都有满足要求的输出结果</p><h3 id="2-2-2-可读性"><a href="#2-2-2-可读性" class="headerlink" title="2.2.2 可读性"></a>2.2.2 可读性</h3><p>算法设计的目的之一是便于阅读、理解和交流。</p><h3 id="2-2-3-健壮性"><a href="#2-2-3-健壮性" class="headerlink" title="2.2.3 健壮性"></a>2.2.3 健壮性</h3><p>当输入数据不合理时，算法能够做出相应的处理，而不会产生异常或莫名其妙的结果。</p><h3 id="2-2-4-时间效率高和存储量低"><a href="#2-2-4-时间效率高和存储量低" class="headerlink" title="2.2.4 时间效率高和存储量低"></a>2.2.4 时间效率高和存储量低</h3><p>尽量满足</p><h2 id="2-3-算法效率的度量方法"><a href="#2-3-算法效率的度量方法" class="headerlink" title="2.3 算法效率的度量方法"></a>2.3 算法效率的度量方法</h2><h3 id="2-3-1-事后统计方法"><a href="#2-3-1-事后统计方法" class="headerlink" title="2.3.1 事后统计方法"></a>2.3.1 事后统计方法</h3><p>有较大缺陷，不考虑</p><h3 id="2-3-2-事前分析估算方法"><a href="#2-3-2-事前分析估算方法" class="headerlink" title="2.3.2 事前分析估算方法"></a>2.3.2 事前分析估算方法</h3><p>定义：在计算机程序编制前，依据统计方法对算法进行估算。</p><p>抛开硬件和软件的影响，程序运行时间依赖于算法的好坏和问题的输入规模。</p><p>分析程序的运行时间，最总要的是把程序看成是独立于程序设计语言的算法或一系列步骤。</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入理解计算机系统</title>
+      <link href="/posts/e8670b7a.html"/>
+      <url>/posts/e8670b7a.html</url>
+      
+        <content type="html"><![CDATA[<p>待学习…</p><span id="more"></span><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 电子信息 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>流固耦合仿真</title>
+      <link href="/posts/6ad5bd55.html"/>
+      <url>/posts/6ad5bd55.html</url>
+      
+        <content type="html"><![CDATA[<p>待学习…</p><span id="more"></span><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科学研究 </tag>
+            
+            <tag> COMSOL </tag>
+            
+            <tag> 流固耦合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>人生在世</title>
+      <link href="/posts/b9908884.html"/>
+      <url>/posts/b9908884.html</url>
+      
+        <content type="html"><![CDATA[<p>Recording life.</p><span id="more"></span><h3 id="2023-4-19"><a href="#2023-4-19" class="headerlink" title="2023-4-19"></a>2023-4-19</h3><p>世界很大，世界很小<font color=white>山东科技大学北门事件</font></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PLC 200 SMART 学习手册</title>
+      <link href="/posts/3eef07d.html"/>
+      <url>/posts/3eef07d.html</url>
+      
+        <content type="html"><![CDATA[<p>待学习…</p><span id="more"></span><h3 id="2023-8-22"><a href="#2023-8-22" class="headerlink" title="2023.8.22"></a>2023.8.22</h3><h4 id="1-特殊标志继电器-SM"><a href="#1-特殊标志继电器-SM" class="headerlink" title="1.特殊标志继电器 (SM)"></a>1.特殊标志继电器 (SM)</h4><p>SM0.0：始终接通；</p><p>SM0.1：首次扫描为1，以后为0，常用来对程序进行初始化；</p><p>SM0.2：当机器执行数学运算的结果为负时，该位被置1；</p><p>SM0.3：开机后进入RUN方式，该位被置1一个扫描周期； </p><p>SM0.4：该位提供一个周期为1分钟的时钟脉冲，30秒为1，30秒为0；</p><p>SM0.5：该位提供一个周期为1秒钟的时钟脉冲，0.5秒为1，0.5秒为0；</p><p>SM0.6：该位为扫描时钟脉冲，本次扫描为1，下次扫描为0；</p><p>SM0.7: 指示CPU工作方式开关的位置，0为Term位置。1为Run位置;</p><p>SM1.0：当执行某些指令，其结果为0时，将改位置1； </p><p>SM1.1：当执行某些指令，其结果溢出或为非法数值时，将改位置1；</p><p>SM1.2：当执行数学运算指令，其结果为负数时，将改位置1；</p><p>SM1.3：试图除以0时，将改位置1</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 自动化 </tag>
+            
+            <tag> 西门子 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux编程基础操作</title>
+      <link href="/posts/b81877f0.html"/>
+      <url>/posts/b81877f0.html</url>
+      
+        <content type="html"><![CDATA[<p>Linux学习备忘</p><span id="more"></span><ol><li>创建文件</li></ol><p><font color= white>[kb]</font>vi test2.c</p><ol start="2"><li>编译并执行文件</li></ol><p>gcc (文件名加后缀) &amp;&amp;.&#x2F;a.out</p><ol start="3"><li>退出文件</li></ol><p>shift ＋ Z ＋ Z</p><ol start="4"><li>复制光标所在整行</li></ol><p>yy</p><ol start="5"><li>删除 (剪切) 光标所在整行</li></ol><p>dd</p><ol start="6"><li>将之前删除 (dd) 或者复制 (yy) 的数据粘贴到光标后面</li></ol><p>p</p><ol start="7"><li>光标定位到最后一行</li></ol><p>Shift + G</p><ol start="8"><li>快速打开终端</li></ol><p>Shift + Alt + t</p><ol start="9"><li>新建文件夹</li></ol><p>mkdir</p><ol start="10"><li>回退文件夹</li></ol><p>cd ..</p><ol start="11"><li>代码左移或右移</li></ol><p><code>v</code>进入vision模式，移动选中一行或多行代码<br>shift + &lt; 整体左移<br>shift + &gt; 整体左移</p><ol start="12"><li>修改文件夹名称</li></ol><p>mv file1 file2</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Yilia主题添加更新日期</title>
+      <link href="/posts/bcd402f1.html"/>
+      <url>/posts/bcd402f1.html</url>
+      
+        <content type="html"><![CDATA[<p><font color=white>[block]</font></p><span id="more"></span><ol><li>在<code>themes\yilia-plus\layout\_partial</code>中找到<code>article.ejs</code>，搜索date关键词，找到文章日期的代码，然后将代码中<code>date</code>改为<code>update</code>，然后将这段代码复制到你想显示的位置。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (!post.noupdated)&#123; %&gt;</span><br><span class="line">&lt;%- partial(&#x27;post/updated&#x27;, &#123;class_name: &#x27;archive-article-updated&#x27;, date_format: null&#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure><ol start="2"><li>在<code>themes\yilia-plus\layout\_partial\post</code>中，新建<code>update.ejs</code>文件，输入如下代码</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot; class=&quot;&lt;%= class_name %&gt;&quot;&gt;</span><br><span class="line">&lt;time updatedtime=&quot;&lt;%= date_xml(post.updated) %&gt;&quot; itemprop=&quot;updatedPublished&quot;&gt;</span><br><span class="line">&lt;strong&gt;&lt;font color=black&gt;&lt;%= &quot;更新日期：&quot;%&gt;&lt;/strong&gt;&lt;%= date(post.updated, date_format) %&gt;&lt;/time&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure><ol start="3"><li>这样，就可以在底部声明添加文章更新日期。</li></ol><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>压电元件阻抗分析</title>
+      <link href="/posts/37b07429.html"/>
+      <url>/posts/37b07429.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>对压电元件进行阻抗分析，获得压电元件的阻抗特性</p></blockquote><span id="more"></span><h1 id="1-创建阻抗分析项目"><a href="#1-创建阻抗分析项目" class="headerlink" title="1.创建阻抗分析项目"></a>1.创建阻抗分析项目</h1><p>  打开workbench，在左侧分析系统找到“Harmonic Response”，即“谐响应模块”。建立谐响应分析。<br><img src="/posts/37b07429/1.png"></p><h1 id="2-首先定义所需的材料"><a href="#2-首先定义所需的材料" class="headerlink" title="2.首先定义所需的材料"></a>2.首先定义所需的材料</h1><p>  常见材料在ANSYS材料库中都有，如果没有需要的材料可以自定义。<br><img src="/posts/37b07429/2.png"></p><h1 id="3-模型导入"><a href="#3-模型导入" class="headerlink" title="3.模型导入"></a>3.模型导入</h1><p>  一般在其他三维软件中建立模型，导入进workbench中。<br><img src="/posts/37b07429/3.png"></p><h1 id="4-网格划分"><a href="#4-网格划分" class="headerlink" title="4.网格划分"></a>4.网格划分</h1><p>  主要方法为扫掠和自由划分，<br>  (1).</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科学研究 </tag>
+            
+            <tag> ANSYS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>0基础学习C语言</title>
+      <link href="/posts/4b23d230.html"/>
+      <url>/posts/4b23d230.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>《带你学C带你飞》</p></blockquote><span id="more"></span><p>scanf函数从标准缓冲区读取数据，在使用scanf函数输入字符时，需要清除缓冲区或在%c前添加一个空格，示例：<code>scanf(&quot; %c&quot;,&amp;name)</code>，否则函数读取到的是上一次输入后的回车。</p><p>引用math库时，在GCC编译时需要加<code>-lm</code>，示例<code>gcc name.c -lm</code>。</p><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><ol><li>在定义指针后，后续使用 *运算符得到的是指针指向对象的值。</li><li>scanf_s:使用时需要输入数组长度。（不输入不影响使用）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanf_s(<span class="string">&quot;%s&quot;</span>,name,1)；</span><br></pre></td></tr></table></figure></li></ol><ul><li>3.数组在使用printf指令打印时具有特殊性，因为输出字符串是通过读取字符串地址，即：输出字符串只需找到字符串的地址，不需要进行解引用。</li></ul><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>基本条件：1. 调用函数自身。 2. 需要正确的结束条件。</p><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><font color=white></font><h3 id="动态内存管理"><a href="#动态内存管理" class="headerlink" title="动态内存管理"></a>动态内存管理</h3><ol><li>malloc函数</li><li>free 函数<br>用于释放malloc、calloc、realloc函数申请的内存空间</li></ol><blockquote><p>内存泄漏:<br>1.申请的动态内存没有及时释放。<br>2.内存地址丢</p></blockquote><blockquote><p>memset: 初始化内存空间<br>memcpy: 复制内存</p></blockquote><ol start="3"><li>calloc<br>动态申请nmemb个长度为size的连续内存空间，并全部初始化为0.</li><li>realloc</li></ol><h3 id="C语言内存布局"><a href="#C语言内存布局" class="headerlink" title="C语言内存布局"></a>C语言内存布局</h3><p>代码段：</p><p>数据段：</p><p>BSS段：</p><p>堆：</p><p>栈： </p><blockquote><p>小甲鱼39节视频中最后一个问题：a和b都是由计算机分配的，存在于栈中，因此a位于高地址，b位于低地址，在强制转换后b为int类型，最大存储数据为255，因此存储258时，在数据达到256后，数据溢出到高位地址，即a的地址，本身为0的a在＋1后变为1，而溢出后b的值变为0，b又重新开始计数，因此258-266&#x3D;2.</p></blockquote><h3 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h3><h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><p>使用<code>inline</code>避免宏定义缺陷</p><p>预处理运算符：<code>#</code>（将符号后的内容装换成字符串）和<code>##</code>（记号连接运算符）。</p><h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>定义：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Name</span><br><span class="line">&#123;</span><br><span class="line">结构体组成1；</span><br><span class="line">结构体组成2；</span><br><span class="line">结构体组成3；</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>声明：</p><p><code>char Name name</code></p><p>访问：</p><p><code>Name.title</code></p><p>内存对齐</p><h3 id="结构体数组和结构体指针"><a href="#结构体数组和结构体指针" class="headerlink" title="结构体数组和结构体指针"></a>结构体数组和结构体指针</h3><h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><p>头插法</p><p>尾插法</p><p>使用方法：利用静态指针指向单链表的尾部</p><h3 id="内存池"><a href="#内存池" class="headerlink" title="内存池"></a>内存池</h3><p>由于结构体使用的内存空间是一定的，因此小甲鱼的课程在从内存池申请空间时，没有声明变量大小。</p><h3 id="typedef"><a href="#typedef" class="headerlink" title="typedef"></a>typedef</h3><p>给数据类型起别名<br>对类型的封装</p><h3 id="共用体"><a href="#共用体" class="headerlink" title="共用体"></a>共用体</h3><p>union</p><p>初始化共用体：只能一次初始化一个成员。</p><h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><h4 id="声明枚举类型"><a href="#声明枚举类型" class="headerlink" title="声明枚举类型"></a>声明枚举类型</h4><p>enum 枚举类型名称 {枚举值名称,枚举值名称}；</p><h4 id="定义枚举变量"><a href="#定义枚举变量" class="headerlink" title="定义枚举变量"></a>定义枚举变量</h4><p>enum 枚举类型名称 枚举变量1,枚举变量2；</p><h3 id="位域"><a href="#位域" class="headerlink" title="位域"></a>位域</h3><h3 id="位操作和位运算"><a href="#位操作和位运算" class="headerlink" title="位操作和位运算"></a>位操作和位运算</h3><h4 id="逻辑位运算符："><a href="#逻辑位运算符：" class="headerlink" title="逻辑位运算符："></a>逻辑位运算符：</h4><p>~ 按位取反 将1变0、将0变1<br>&amp; 按位与<br>^ 按位异或 位不同为1，位相同为0<br>| 按位或 </p><p>&amp; ^ | 可以和赋值号（ &#x3D; ）结合</p><h4 id="移位运算符："><a href="#移位运算符：" class="headerlink" title="移位运算符："></a>移位运算符：</h4><p>左移位运算符 <code>&lt;&lt;</code><br>右移位运算符 <code>&gt;&gt;</code></p><h4 id="掩码"><a href="#掩码" class="headerlink" title="掩码"></a>掩码</h4><h3 id="打开和关闭文件"><a href="#打开和关闭文件" class="headerlink" title="打开和关闭文件"></a>打开和关闭文件</h3><p>输入 -&gt; 处理 -&gt; 输出</p><p>函数：<br>fopen<br>fclose</p><h3 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h3><p>####顺序读写</p><p>单个字符读取和写入<br>读取字符函数：fgetc、getc<br>写入字符函数：fputc、putc</p><p>整个字符串读写<br>函数：fgets、fputs</p><p>格式化读写文件<br>函数：fscanf（scanf form file）、fprintf（printf to file）</p><p>二进制读写文件<br>函数：fread、fwrite</p><h4 id="随机读写"><a href="#随机读写" class="headerlink" title="随机读写"></a>随机读写</h4><p>函数：ftell、rewind、fseek</p><h3 id="标准流"><a href="#标准流" class="headerlink" title="标准流"></a>标准流</h3><p>标准输入：stdin<br>标准输出：stdout<br>标准错误输出：stderr</p><p>错误指示器：ferror<br>清除末尾指示器和错误指示器：cleanerr<br>存储错误原因：errno<br>打印错误原因：perror<br>直接返回错误信息：strerror</p><h3 id="IO缓冲区"><a href="#IO缓冲区" class="headerlink" title="IO缓冲区"></a>IO缓冲区</h3><p>函数：setvbuf<br>指定缓存模式</p><p>块缓存：<br>行缓存：<br>不缓存：<br>fflush</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>声场与流场相互作用仿真</title>
+      <link href="/posts/1a9f9e17.html"/>
+      <url>/posts/1a9f9e17.html</url>
+      
+        <content type="html"><![CDATA[<p>简介：声学与流场产生的流体流动研究。</p><span id="more"></span><h2 id="思路一：二维截面"><a href="#思路一：二维截面" class="headerlink" title="思路一：二维截面"></a>思路一：二维截面</h2><p>官方程序： <a href="http://cn.comsol.com/model/acoustic-streaming-in-a-microchannel-cross-section-17087">[微通道横截面中的声流]</a></p><h3 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h3><p>温度（可选）、声学、流动、粒子追踪</p><h3 id="改动：在层流场中添加气体边界条件，增加入口速度和出口压力。"><a href="#改动：在层流场中添加气体边界条件，增加入口速度和出口压力。" class="headerlink" title="改动：在层流场中添加气体边界条件，增加入口速度和出口压力。"></a>改动：在层流场中添加气体边界条件，增加入口速度和出口压力。</h3><p>备注：<br>1.大部分情况下声场使用线弹性，远距离传播考虑热传导和粘性<br>2.流场利用声场产生的振速</p><h3 id="存在问题："><a href="#存在问题：" class="headerlink" title="存在问题："></a>存在问题：</h3><p>1.频域计算压力远大于实际产生的声压。<br>2.声压与气压是两个单独变量无法叠加。</p><h2 id="思路二：线性N-S方程"><a href="#思路二：线性N-S方程" class="headerlink" title="思路二：线性N-S方程"></a>思路二：线性N-S方程</h2><p>备注：<br>1.COMSOL中压力声学是一个无黏性无流动的简化模型。<br>2.一般假设声场不影响流动，流动影响声场</p><h2 id="压电微泵"><a href="#压电微泵" class="headerlink" title="压电微泵"></a>压电微泵</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科学研究 </tag>
+            
+            <tag> COMSOL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Test Page</title>
+      <link href="/posts/4832c66c.html"/>
+      <url>/posts/4832c66c.html</url>
+      
+        <content type="html"><![CDATA[<p>测试代码、记录效果</p><span id="more"></span><h3 id="2023年8月6日"><a href="#2023年8月6日" class="headerlink" title="2023年8月6日"></a>2023年8月6日</h3><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>安装命令：npm install hexo-simple-mindmap</p><blockquote class="pullquote mindmap mindmap-md"><ul><li>思维导图<ul><li>Tab分级<ul><li>示例</li></ul></li></ul></li></ul></blockquote><h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">#### Warning Header</span><br><span class="line">Warning content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><p>效果：</p><blockquote><h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p>Warning content</p></blockquote><p>也可以使用<code>&gt;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; #### Warning Header</span><br><span class="line">&gt; Warning content</span><br></pre></td></tr></table></figure><p>效果:</p><blockquote><h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p>Warning content</p></blockquote><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/posts/4a17b156.html"/>
+      <url>/posts/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><span id="more"></span><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
