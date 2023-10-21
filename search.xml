@@ -4,11 +4,72 @@
   
     
     <entry>
+      <title>test2</title>
+      <link href="/posts/13bb8d58.html"/>
+      <url>/posts/13bb8d58.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 无 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>EXCEL使用技巧</title>
+      <link href="/posts/59436549.html"/>
+      <url>/posts/59436549.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：EXCEL使用技巧</p></blockquote><span id="more"></span><h3 id="2023年10月22日"><a href="#2023年10月22日" class="headerlink" title="2023年10月22日"></a>2023年10月22日</h3><h4 id="单元格条件格式以百分比填充"><a href="#单元格条件格式以百分比填充" class="headerlink" title="单元格条件格式以百分比填充"></a>单元格条件格式以百分比填充</h4><p>将条件格式的最大值设置为数字“1”</p><h3 id="2023-x2F-9-x2F-10"><a href="#2023-x2F-9-x2F-10" class="headerlink" title="2023&#x2F;9&#x2F;10"></a>2023&#x2F;9&#x2F;10</h3><h4 id="高阶甘特图"><a href="#高阶甘特图" class="headerlink" title="高阶甘特图"></a>高阶甘特图</h4><ol><li><p><strong>Ctrl+；</strong> 快速输入当前日期</p></li><li><p>格式-&gt;自定义-&gt;添加<strong>周AAA</strong> 显示周几</p></li><li><p><strong>F4</strong> 绝对引用</p></li><li><p>TEXT(A1,”dddd”)</p></li></ol><p>*dddd为英文星期全称<br>*ddd为英文星期简称<br>*aaaa为中文星期全称<br>*aaa为中文星期简称</p><ol start="5"><li><p><strong>weeknum(“”,“2，国外周日为第一天”)</strong> 返回日期在当年的周数</p></li><li><p><strong>Ctrl+t</strong> 结构化表格、动态表、超级表</p></li><li><p><strong>Ctrl+1</strong> 自定义格式</p></li><li><p><strong>数据-&gt;数据验证-&gt;序列</strong> 添加下拉选项</p></li><li><p><strong>条件格式-&gt;数据条</strong> 以单元格百分比显示</p></li></ol><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 办公技巧 </tag>
+            
+            <tag> EXCEL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Word快捷指令</title>
+      <link href="/posts/9f3f6fb5.html"/>
+      <url>/posts/9f3f6fb5.html</url>
+      
+        <content type="html"><![CDATA[<p>简介：Word快捷指令</p><span id="more"></span><h3 id="2023-x2F-9-x2F-9"><a href="#2023-x2F-9-x2F-9" class="headerlink" title="2023&#x2F;9&#x2F;9"></a>2023&#x2F;9&#x2F;9</h3><p>线型：</p><p>虚线：三个“*”，回车</p><p>波浪线：三个“~”，回车</p><p>隔行线：三个“#”，回车</p><p>双直线：三个“&#x3D;”，回车</p><p>直线：三个“-”，回车</p><p>实例：</p><p><img src="/posts/9f3f6fb5/%E7%BA%BF%E5%9E%8B.png"></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Word </tag>
+            
+            <tag> 办公技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WIN11添加过时硬件“Microsoft KM-TEST环回适配器”</title>
       <link href="/posts/2fae4cea.html"/>
       <url>/posts/2fae4cea.html</url>
       
-        <content type="html"><![CDATA[<blockquote><p>WIN11添加过时硬件“Microsoft KM-TEST环回适配器”</p></blockquote><span id="more"></span><hr><h3 id="1-使用“WIN＋R”调出命令提示符，并输入“hdwwiz”"><a href="#1-使用“WIN＋R”调出命令提示符，并输入“hdwwiz”" class="headerlink" title="1.使用“WIN＋R”调出命令提示符，并输入“hdwwiz”"></a>1.使用“WIN＋R”调出命令提示符，并输入“hdwwiz”</h3><p><img src="/posts/2fae4cea/cmd.png"></p><h3 id="2-弹出添加硬件向导窗口，下一步"><a href="#2-弹出添加硬件向导窗口，下一步" class="headerlink" title="2.弹出添加硬件向导窗口，下一步"></a>2.弹出添加硬件向导窗口，下一步</h3><p><img src="/posts/2fae4cea/picture1.png"></p><h3 id="3-选择“安装我手动从列表选择的硬件”，下一步"><a href="#3-选择“安装我手动从列表选择的硬件”，下一步" class="headerlink" title="3.选择“安装我手动从列表选择的硬件”，下一步"></a>3.选择“安装我手动从列表选择的硬件”，下一步</h3><p><img src="/posts/2fae4cea/picture2.png"></p><h3 id="4-选择“网络适配器”，下一步"><a href="#4-选择“网络适配器”，下一步" class="headerlink" title="4.选择“网络适配器”，下一步"></a>4.选择“网络适配器”，下一步</h3><p><img src="/posts/2fae4cea/picture3.png"></p><h3 id="5-在左侧找到“Micorsoft”，右侧选择“Microsoft-KM-TEST环回适配器”，下一步"><a href="#5-在左侧找到“Micorsoft”，右侧选择“Microsoft-KM-TEST环回适配器”，下一步" class="headerlink" title="5.在左侧找到“Micorsoft”，右侧选择“Microsoft KM-TEST环回适配器”，下一步"></a>5.在左侧找到“Micorsoft”，右侧选择“Microsoft KM-TEST环回适配器”，下一步</h3><p><img src="/posts/2fae4cea/picture4.png"></p><h3 id="6-等待下载完成"><a href="#6-等待下载完成" class="headerlink" title="6.等待下载完成"></a>6.等待下载完成</h3><p><img src="/posts/2fae4cea/picture6.png"></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<blockquote><p>简介：WIN11添加过时硬件“Microsoft KM-TEST环回适配器”</p></blockquote><span id="more"></span><hr><h3 id="1-使用“WIN＋R”调出命令提示符，并输入“hdwwiz”"><a href="#1-使用“WIN＋R”调出命令提示符，并输入“hdwwiz”" class="headerlink" title="1.使用“WIN＋R”调出命令提示符，并输入“hdwwiz”"></a>1.使用“WIN＋R”调出命令提示符，并输入“hdwwiz”</h3><p><img src="/posts/2fae4cea/cmd.png"></p><h3 id="2-弹出添加硬件向导窗口，下一步"><a href="#2-弹出添加硬件向导窗口，下一步" class="headerlink" title="2.弹出添加硬件向导窗口，下一步"></a>2.弹出添加硬件向导窗口，下一步</h3><p><img src="/posts/2fae4cea/picture1.png"></p><h3 id="3-选择“安装我手动从列表选择的硬件”，下一步"><a href="#3-选择“安装我手动从列表选择的硬件”，下一步" class="headerlink" title="3.选择“安装我手动从列表选择的硬件”，下一步"></a>3.选择“安装我手动从列表选择的硬件”，下一步</h3><p><img src="/posts/2fae4cea/picture2.png"></p><h3 id="4-选择“网络适配器”，下一步"><a href="#4-选择“网络适配器”，下一步" class="headerlink" title="4.选择“网络适配器”，下一步"></a>4.选择“网络适配器”，下一步</h3><p><img src="/posts/2fae4cea/picture3.png"></p><h3 id="5-在左侧找到“Micorsoft”，右侧选择“Microsoft-KM-TEST环回适配器”，下一步"><a href="#5-在左侧找到“Micorsoft”，右侧选择“Microsoft-KM-TEST环回适配器”，下一步" class="headerlink" title="5.在左侧找到“Micorsoft”，右侧选择“Microsoft KM-TEST环回适配器”，下一步"></a>5.在左侧找到“Micorsoft”，右侧选择“Microsoft KM-TEST环回适配器”，下一步</h3><p><img src="/posts/2fae4cea/picture4.png"></p><h3 id="6-等待下载完成"><a href="#6-等待下载完成" class="headerlink" title="6.等待下载完成"></a>6.等待下载完成</h3><p><img src="/posts/2fae4cea/picture6.png"></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       
       
       
@@ -332,7 +393,7 @@
       <link href="/posts/4832c66c.html"/>
       <url>/posts/4832c66c.html</url>
       
-        <content type="html"><![CDATA[<p>测试代码、记录效果</p><span id="more"></span><h3 id="2023年8月6日"><a href="#2023年8月6日" class="headerlink" title="2023年8月6日"></a>2023年8月6日</h3><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>安装命令：npm install hexo-simple-mindmap</p><blockquote class="pullquote mindmap mindmap-md"><ul><li>思维导图<ul><li>Tab分级<ul><li>示例</li></ul></li></ul></li></ul></blockquote><h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">#### Warning Header</span><br><span class="line">Warning content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><p>效果：</p><blockquote><h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p>Warning content</p></blockquote><p>也可以使用<code>&gt;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; #### Warning Header</span><br><span class="line">&gt; Warning content</span><br></pre></td></tr></table></figure><p>效果:</p><blockquote><h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p>Warning content</p></blockquote><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<p>测试代码、记录效果</p><span id="more"></span><h3 id="2023年8月6日"><a href="#2023年8月6日" class="headerlink" title="2023年8月6日"></a>2023年8月6日</h3><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>安装命令：npm install hexo-simple-mindmap</p><blockquote class="pullquote mindmap mindmap-md"><ul><li>思维导图<ul><li>Tab分级<ul><li>不能引入图片</li></ul></li></ul></li></ul></blockquote><h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">#### Warning Header</span><br><span class="line">Warning content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><p>效果：</p><blockquote><h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p>Warning content</p></blockquote><p>也可以使用<code>&gt;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; #### Warning Header</span><br><span class="line">&gt; Warning content</span><br></pre></td></tr></table></figure><p>效果:</p><blockquote><h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p>Warning content</p></blockquote><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       
       
       
