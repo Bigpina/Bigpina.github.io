@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://bigpina.github.io">
-  <title>Archives: 2023 | Bigpina&#39; NoteBook</title>
+  <title>QT和OPENCV环境配置-使用Mingw | Bigpina&#39; NoteBook</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Bigpina&#39; NoteBook">
-<meta property="og:url" content="http://bigpina.github.io/archives/2023/page/2/index.html">
+  <meta name="description" content="简介：结合自己的配置过程，供大家参考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QT和OPENCV环境配置-使用Mingw">
+<meta property="og:url" content="http://bigpina.github.io/posts/6a4765f.html">
 <meta property="og:site_name" content="Bigpina&#39; NoteBook">
+<meta property="og:description" content="简介：结合自己的配置过程，供大家参考">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-29T14:14:47.000Z">
+<meta property="article:modified_time" content="2023-10-29T14:24:39.695Z">
 <meta property="article:author" content="🍍大菠萝">
+<meta property="article:tag" content="无">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Bigpina&#39; NoteBook" type="application/atom+xml">
@@ -358,484 +363,283 @@ inputArea.onfocus = function(){ getSearchFile()
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-QT和OPENCV环境配置-使用Mingw" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/682b50d5.html" class="archive-article-date">
-        <time datetime="2023-08-15T14:18:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-15</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/682b50d5.html" target="_blank">C#运动控制及界面开发</a>
   
+    <h1 class="article-title" itemprop="name">
+      QT和OPENCV环境配置-使用Mingw
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+<a href="/posts/6a4765f.html" class="archive-article-date">
+        <time datetime="2023-10-29T14:14:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-29</time>
+</a>
+
+  
+ 
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">94字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote><p>简介：结合自己的配置过程，供大家参考</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="1-软件版本："><a href="#1-软件版本：" class="headerlink" title="1.软件版本："></a>1.软件版本：</h3><p>QT： 6.2.4<br>OPENCV： 4.8<br>Python： 3.12<br>Cmake： QT自带</p>
+<h3 id="2-安装过程：略"><a href="#2-安装过程：略" class="headerlink" title="2.安装过程：略"></a>2.安装过程：略</h3><h3 id="3-Cmake使用参考此视频"><a href="#3-Cmake使用参考此视频" class="headerlink" title="3.Cmake使用参考此视频"></a>3.Cmake使用参考此视频</h3><p>传送门: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Za4y1v7ra/?buvid=XU616126D542B8D9B167733428C64FE692C6F&from_spmid=main.my-history.0.0&is_story_h5=false&mid=9AC71GOD+KT4NhVvZnZZCn8FTQ/SZMtL1rElX6M3iMo=&p=1&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&share_session_id=47e0f1f0-247c-4d41-b52f-cc0455c24b0c&share_source=WEIXIN&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1698589426&unique_k=TY9ywgD&up_id=365916694">OpenCV4 + Qt5 开发环境配置</a></p>
+<h3 id="4-报错处理"><a href="#4-报错处理" class="headerlink" title="4.报错处理"></a>4.报错处理</h3><h4 id="报错结尾为opencv-core"><a href="#报错结尾为opencv-core" class="headerlink" title="报错结尾为opencv_core"></a>报错结尾为opencv_core</h4><p>在cmake里面取消OPENCV_ENABLE_ALLOCATOR_STATS的勾选，重新Configure和Generate，在powershell窗口中继续使用mingw32-make -j编译。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+    
+
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          🍍大菠萝
+        </li>
+		<li>
+		 
+		 <a href="/posts/6a4765f.html" class="article-updated">
+		
+        <time updatedtime="2023-10-29T14:24:39.695Z" itemprop="updatedPublished">
+ 		
+		
+		<strong><font color=black>更新日期： </strong>2023-10-29</time>
+</a>
+	
+		  
+		</li>
+		
+		
+		
+				
+        <li>
+          <strong>本文链接：</strong>
+		  
+          <a href="http://bigpina.github.io/posts/6a4765f.html" title="QT和OPENCV环境配置-使用Mingw" target="_blank">http://bigpina.github.io/posts/6a4765f.html</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工控</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">无</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://bigpina.github.io/posts/6a4765f.html" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/9d614237.html" class="archive-article-date">
-        <time datetime="2023-08-06T13:52:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-06</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/posts/f8f37c42.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">QT+HALCON环境配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/9d614237.html" target="_blank">RobotStudio基础</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工控</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ABB</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">1.软件版本：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%EF%BC%9A%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">2.安装过程：略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Cmake%E4%BD%BF%E7%94%A8%E5%8F%82%E8%80%83%E6%AD%A4%E8%A7%86%E9%A2%91"><span class="toc-number">3.</span> <span class="toc-text">3.Cmake使用参考此视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">4.报错处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E7%BB%93%E5%B0%BE%E4%B8%BAopencv-core"><span class="toc-number">4.1.</span> <span class="toc-text">报错结尾为opencv_core</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/f3de4c07.html" class="archive-article-date">
-        <time datetime="2023-05-28T12:40:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-28</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/f3de4c07.html" target="_blank">Markdown技巧</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/5e3708b8.html" class="archive-article-date">
-        <time datetime="2023-05-25T14:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-25</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/5e3708b8.html" target="_blank">第2章 这不是Bug，而是语言特性</a>
-  
-    </h1>
+    <section id="comments" class="comments"> 
+	<style> 
+	  .comments{margin:30px;padding:10px;background:#fff}
+ 	  @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+	</style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rhTpH8O7AWH6rnMGKvLJWVog-gzGzoHsz",
+            app_key: "760VliXZwjEWAdCBv6g5HGK5",
+            placeholder: "Leave your traces",
+            avatar:"retro"
+        });
+    }
+</script>
+    </section>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname =
+    'ture'; // required: replace example with your forum shortname
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/ef905eca.html" class="archive-article-date">
-        <time datetime="2023-05-25T03:03:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-25</time>
-</a>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/ef905eca.html" target="_blank">第2章 算法</a>
-  
-    </h1>
-  
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+</section>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/e8670b7a.html" class="archive-article-date">
-        <time datetime="2023-04-29T14:38:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-29</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/e8670b7a.html" target="_blank">深入理解计算机系统</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">电子信息</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/6ad5bd55.html" class="archive-article-date">
-        <time datetime="2023-04-25T06:06:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-25</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/6ad5bd55.html" target="_blank">流固耦合仿真</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">科学研究</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">COMSOL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">流固耦合</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/b9908884.html" class="archive-article-date">
-        <time datetime="2023-04-19T13:44:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-19</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/b9908884.html" target="_blank">人生在世</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/3eef07d.html" class="archive-article-date">
-        <time datetime="2023-04-18T12:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/3eef07d.html" target="_blank">PLC 200 SMART 学习手册</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">自动化</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">西门子</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/b81877f0.html" class="archive-article-date">
-        <time datetime="2023-04-13T14:05:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/b81877f0.html" target="_blank">Linux编程基础操作</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2023/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2023/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2023/page/3/">3</a><a class="extend next" rel="next" href="/archives/2023/page/3/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -866,8 +670,8 @@ inputArea.onfocus = function(){ getSearchFile()
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

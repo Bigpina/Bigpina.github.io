@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://bigpina.github.io/posts/f8f37c42/pic2.png">
 <meta property="og:image" content="http://bigpina.github.io/posts/f8f37c42/pic3.png">
 <meta property="article:published_time" content="2023-10-28T17:38:29.000Z">
-<meta property="article:modified_time" content="2023-10-29T06:59:16.096Z">
+<meta property="article:modified_time" content="2023-10-29T14:12:50.726Z">
 <meta property="article:author" content="🍍大菠萝">
 <meta property="article:tag" content="CV">
 <meta property="article:tag" content="HALCON">
@@ -202,7 +202,7 @@ inputArea.onfocus = function(){ getSearchFile()
 			</div>
 		<div>
 		<nav>
-			<font size=2px>总文章数 25
+			<font size=2px>总文章数 26
 		</nav>
 		</div>
 		<nav>
@@ -398,7 +398,7 @@ inputArea.onfocus = function(){ getSearchFile()
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">227字</span>
+      <span class="post-count">239字</span>
     </span>
   </span>
 
@@ -435,7 +435,7 @@ inputArea.onfocus = function(){ getSearchFile()
 <blockquote>
 <p>注意添加位置</p>
 </blockquote>
-<h3 id="2-在头文件中添加以下代码"><a href="#2-在头文件中添加以下代码" class="headerlink" title="2. 在头文件中添加以下代码"></a>2. 在头文件中添加以下代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;HalconCpp.h&gt;</span><br><span class="line">using namespace HalconCpp;</span><br></pre></td></tr></table></figure>
+<h3 id="2-在头文件中添加以下代码"><a href="#2-在头文件中添加以下代码" class="headerlink" title="2. 在头文件中添加以下代码"></a>2. 在头文件中添加以下代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;HalconCpp.h&gt;</span><br><span class="line">// 后期根据需要添加头文件</span><br><span class="line">using namespace HalconCpp;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HObject  ho_Image;</span><br><span class="line">HTuple  hv_Width,hv_Height,hv_WindowHandle;</span><br><span class="line">Hlong widid;</span><br></pre></td></tr></table></figure>
 
@@ -443,16 +443,16 @@ inputArea.onfocus = function(){ getSearchFile()
 <img src="/posts/f8f37c42/pic2.png" class="">
 </div>
 
-<h3 id="3-在文件中添加窗口代码"><a href="#3-在文件中添加窗口代码" class="headerlink" title="3. 在文件中添加窗口代码"></a>3. 在文件中添加窗口代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">widid=static_cast&lt;Hlong&gt;(ui-&gt;label_2-&gt;winId());</span><br><span class="line">OpenWindow(0,0,ui-&gt;label_2-&gt;width(),ui-&gt;label_2-&gt;height(),widid,&quot;visible&quot;,&quot;&quot;,&amp;hv_WindowHandle);</span><br></pre></td></tr></table></figure>
+<h3 id="3-在mainwindow-cpp文件中添加窗口代码"><a href="#3-在mainwindow-cpp文件中添加窗口代码" class="headerlink" title="3. 在mainwindow.cpp文件中添加窗口代码"></a>3. 在mainwindow.cpp文件中添加窗口代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">widid=static_cast&lt;Hlong&gt;(ui-&gt;label-&gt;winId());</span><br><span class="line">OpenWindow(0,0,ui-&gt;label-&gt;width(),ui-&gt;label-&gt;height(),widid,&quot;visible&quot;,&quot;&quot;,&amp;hv_WindowHandle);</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ReadImage(&amp;ho_Image,&quot;G:/CV/HALCON/1.jpg&quot;); //  &quot;G:/CV/HALCON/1.jpg&quot;需要更改为自己电脑中图片的路径</span><br><span class="line">GetImageSize(ho_Image,&amp;hv_Width,&amp;hv_Height);</span><br><span class="line">HDevWindowStack::Push(hv_WindowHandle);</span><br><span class="line">if(HDevWindowStack::IsOpen())</span><br><span class="line">	SetPart(HDevWindowStack::GetActive(),0,0,hv_Width-1,hv_Height-1);</span><br><span class="line">if(HDevWindowStack::IsOpen())</span><br><span class="line">	DispObj(ho_Image,HDevWindowStack::GetActive());</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ReadImage(&amp;ho_Image,&quot;G:/CV/HALCON/1.jpg&quot;); </span><br><span class="line">//  &quot;G:/CV/HALCON/1.jpg&quot;需要更改为自己电脑中图片的路径</span><br><span class="line">GetImageSize(ho_Image,&amp;hv_Width,&amp;hv_Height);</span><br><span class="line">HDevWindowStack::Push(hv_WindowHandle);</span><br><span class="line">if(HDevWindowStack::IsOpen())</span><br><span class="line">	SetPart(HDevWindowStack::GetActive(),0,0,hv_Width-1,hv_Height-1);</span><br><span class="line">if(HDevWindowStack::IsOpen())</span><br><span class="line">	DispObj(ho_Image,HDevWindowStack::GetActive());</span><br></pre></td></tr></table></figure>
 
 <div style="width:50%;margin:auto">
 <img src="/posts/f8f37c42/pic3.png" class="">
 </div>
 
 <h3 id="4-在UI文件中添加一个label和pushbotton"><a href="#4-在UI文件中添加一个label和pushbotton" class="headerlink" title="4. 在UI文件中添加一个label和pushbotton"></a>4. 在UI文件中添加一个<code>label</code>和<code>pushbotton</code></h3><p><code>pushbotton</code>右键选择<code>提升槽</code>,选择<code>clicked</code>.</p>
-<p>调试效果</p>
+<p>调试运行</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
     
 
@@ -470,7 +470,7 @@ inputArea.onfocus = function(){ getSearchFile()
 		 
 		 <a href="/posts/f8f37c42.html" class="article-updated">
 		
-        <time updatedtime="2023-10-29T06:59:16.096Z" itemprop="updatedPublished">
+        <time updatedtime="2023-10-29T14:12:50.726Z" itemprop="updatedPublished">
  		
 		
 		<strong><font color=black>更新日期： </strong>2023-10-29</time>
@@ -587,6 +587,15 @@ inputArea.onfocus = function(){ getSearchFile()
 
 <nav id="article-nav">
   
+    <a href="/posts/6a4765f.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          QT和OPENCV环境配置-使用Mingw
+        
+      </div>
+    </a>
+  
   
     <a href="/posts/e8917f8b.html" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">名词整理</div>
@@ -616,7 +625,7 @@ inputArea.onfocus = function(){ getSearchFile()
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9C%A8-pro%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">1.在.pro文件中添加以下代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">2. 在头文件中添加以下代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%AA%97%E5%8F%A3%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">3. 在文件中添加窗口代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8UI%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AAlabel%E5%92%8Cpushbotton"><span class="toc-number">4.</span> <span class="toc-text">4. 在UI文件中添加一个label和pushbotton</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9C%A8-pro%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">1.在.pro文件中添加以下代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">2. 在头文件中添加以下代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9C%A8mainwindow-cpp%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%AA%97%E5%8F%A3%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">3. 在mainwindow.cpp文件中添加窗口代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8UI%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AAlabel%E5%92%8Cpushbotton"><span class="toc-number">4.</span> <span class="toc-text">4. 在UI文件中添加一个label和pushbotton</span></a></li></ol>
                     </div>
                 </span>
             </div>
