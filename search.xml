@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>SolidWorks使用技巧</title>
+      <link href="/posts/74c008c3.html"/>
+      <url>/posts/74c008c3.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><h3 id="2023年11月19日"><a href="#2023年11月19日" class="headerlink" title="2023年11月19日"></a>2023年11月19日</h3><h4 id="装配体批量上色"><a href="#装配体批量上色" class="headerlink" title="装配体批量上色"></a>装配体批量上色</h4><ol><li><p>评估-&gt;装配体直观</p></li><li><p>左侧导航栏-&gt;质量-&gt;添加显示状态-&gt;配置页面-&gt;双击”直观显示状态”</p></li></ol><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SolidWorks </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>QT和OPENCV环境配置-使用Mingw</title>
       <link href="/posts/6a4765f.html"/>
       <url>/posts/6a4765f.html</url>
       
-        <content type="html"><![CDATA[<blockquote><p>简介：结合自己的配置过程，供大家参考</p></blockquote><span id="more"></span><h3 id="1-软件版本："><a href="#1-软件版本：" class="headerlink" title="1.软件版本："></a>1.软件版本：</h3><p>QT： 6.2.4<br>OPENCV： 4.8<br>Python： 3.12<br>Cmake： 官网最新版</p><h3 id="2-安装过程：略"><a href="#2-安装过程：略" class="headerlink" title="2.安装过程：略"></a>2.安装过程：略</h3><h3 id="3-Cmake使用参考此视频"><a href="#3-Cmake使用参考此视频" class="headerlink" title="3.Cmake使用参考此视频"></a>3.Cmake使用参考此视频</h3><p>传送门: <a href="https://www.bilibili.com/video/BV1Za4y1v7ra/?buvid=XU616126D542B8D9B167733428C64FE692C6F&from_spmid=main.my-history.0.0&is_story_h5=false&mid=9AC71GOD+KT4NhVvZnZZCn8FTQ/SZMtL1rElX6M3iMo=&p=1&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&share_session_id=47e0f1f0-247c-4d41-b52f-cc0455c24b0c&share_source=WEIXIN&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1698589426&unique_k=TY9ywgD&up_id=365916694">OpenCV4 + Qt5 开发环境配置</a></p><h3 id="4-报错处理"><a href="#4-报错处理" class="headerlink" title="4.报错处理"></a>4.报错处理</h3><h4 id="报错结尾为opencv-core"><a href="#报错结尾为opencv-core" class="headerlink" title="报错结尾为opencv_core"></a>报错结尾为opencv_core</h4><p>在cmake里面取消OPENCV_ENABLE_ALLOCATOR_STATS的勾选，重新Configure和Generate，在powershell窗口中继续使用mingw32-make -j编译。</p><h3 id="报错中有VS-VERSION"><a href="#报错中有VS-VERSION" class="headerlink" title="报错中有VS_VERSION"></a>报错中有VS_VERSION</h3><p>在CMAKE中添加一项<br>add Entry -&gt; 名称：OPENCV_VS_VERSIONINFO_SKIP 类型：BOOL </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<blockquote><p>简介：结合自己的配置过程，供大家参考</p></blockquote><span id="more"></span><h3 id="1-软件版本："><a href="#1-软件版本：" class="headerlink" title="1.软件版本："></a>1.软件版本：</h3><p>QT： 6.2.4<br>OPENCV： 4.8<br>Python： 3.12<br>Cmake： 官网最新版</p><h3 id="2-安装过程：略"><a href="#2-安装过程：略" class="headerlink" title="2.安装过程：略"></a>2.安装过程：略</h3><h3 id="3-Cmake使用参考此视频"><a href="#3-Cmake使用参考此视频" class="headerlink" title="3.Cmake使用参考此视频"></a>3.Cmake使用参考此视频</h3><p>传送门: <a href="https://www.bilibili.com/video/BV1Za4y1v7ra/?buvid=XU616126D542B8D9B167733428C64FE692C6F&from_spmid=main.my-history.0.0&is_story_h5=false&mid=9AC71GOD+KT4NhVvZnZZCn8FTQ/SZMtL1rElX6M3iMo=&p=1&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&share_session_id=47e0f1f0-247c-4d41-b52f-cc0455c24b0c&share_source=WEIXIN&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1698589426&unique_k=TY9ywgD&up_id=365916694">OpenCV4 + Qt5 开发环境配置</a></p><h3 id="4-报错处理"><a href="#4-报错处理" class="headerlink" title="4.报错处理"></a>4.报错处理</h3><h4 id="报错结尾为opencv-core"><a href="#报错结尾为opencv-core" class="headerlink" title="报错结尾为opencv_core"></a>报错结尾为opencv_core</h4><p>在cmake里面取消OPENCV_ENABLE_ALLOCATOR_STATS的勾选，重新Configure和Generate，在powershell窗口中继续使用mingw32-make -j编译。</p><h4 id="报错中有VS-VERSION"><a href="#报错中有VS-VERSION" class="headerlink" title="报错中有VS_VERSION"></a>报错中有VS_VERSION</h4><p>在CMAKE中添加一项<br>add Entry -&gt; 名称：OPENCV_VS_VERSIONINFO_SKIP 类型：BOOL </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       
       
       
