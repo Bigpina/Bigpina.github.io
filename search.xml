@@ -4,6 +4,67 @@
   
     
     <entry>
+      <title>Siemens PLC 1200</title>
+      <link href="/posts/5d7c375d.html"/>
+      <url>/posts/5d7c375d.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><h2 id="第一节：区别对比"><a href="#第一节：区别对比" class="headerlink" title="第一节：区别对比"></a>第一节：区别对比</h2><ol><li><p>1200 可以仿真</p></li><li><p>硬件、软件分开下载</p></li><li><p>FC（函数）、FB（函数块）</p></li><li><p>OB（中断程序）（非重点）</p></li><li><p>定时器（最大21天）、计数器：自行创建，个数取决于内存。</p></li><li><p>M存储区和DB块</p></li><li><p>变量表</p></li><li><p>监控和强制表</p></li><li><p>一个程序段可以有多个回路</p></li><li><p>指令可以直接连左母线</p></li><li><p>模拟量输入 IW</p></li><li><p>模拟量输出 QW</p></li><li><p>高速计数器变为 ID，ID1000（默认）、ID1004</p></li></ol><h2 id="第二节："><a href="#第二节：" class="headerlink" title="第二节："></a>第二节：</h2><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+            <tag> PLC </tag>
+            
+            <tag> 1200 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TIA 博图小知识</title>
+      <link href="/posts/ddf9bf4.html"/>
+      <url>/posts/ddf9bf4.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><h2 id="2024年4月22日"><a href="#2024年4月22日" class="headerlink" title="2024年4月22日"></a>2024年4月22日</h2><h3 id="安装博图后出现通讯设置"><a href="#安装博图后出现通讯设置" class="headerlink" title="安装博图后出现通讯设置"></a>安装博图后出现通讯设置</h3><p>在任务管理器中找到SCSMonitor服务，将自动改为手动。 </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>毛选语录摘抄</title>
+      <link href="/posts/6e6d4d0d.html"/>
+      <url>/posts/6e6d4d0d.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C Sharp 入门详解笔记</title>
       <link href="/posts/312a0f46.html"/>
       <url>/posts/312a0f46.html</url>
