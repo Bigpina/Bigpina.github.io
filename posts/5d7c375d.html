@@ -17,13 +17,16 @@
 <meta property="og:site_name" content="Bigpina&#39; NoteBook">
 <meta property="og:description" content="简介：无">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://bigpina.github.io/posts/5d7c375d/Compare.png">
+<meta property="og:image" content="http://bigpina.github.io/posts/5d7c375d/Trans.png">
 <meta property="article:published_time" content="2024-04-28T15:51:10.000Z">
-<meta property="article:modified_time" content="2024-05-09T15:02:57.547Z">
+<meta property="article:modified_time" content="2024-05-22T14:51:38.528Z">
 <meta property="article:author" content="🍍大菠萝">
 <meta property="article:tag" content="Siemens">
 <meta property="article:tag" content="PLC">
 <meta property="article:tag" content="1200">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bigpina.github.io/posts/5d7c375d/Compare.png">
   
     <link rel="alternative" href="/atom.xml" title="Bigpina&#39; NoteBook" type="application/atom+xml">
   
@@ -394,7 +397,7 @@ inputArea.onfocus = function(){ getSearchFile()
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">519字</span>
+      <span class="post-count">1.6k字</span>
     </span>
   </span>
 
@@ -403,7 +406,7 @@ inputArea.onfocus = function(){ getSearchFile()
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -479,28 +482,28 @@ inputArea.onfocus = function(){ getSearchFile()
 <table>
 <thead>
 <tr>
-<th>1500 PLC型号</th>
+<th align="left">1500 PLC型号</th>
 <th>特点</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>标准型</td>
+<td align="left">标准型</td>
 <td>无字</td>
 </tr>
 <tr>
-<td>紧凑型</td>
+<td align="left">紧凑型</td>
 <td>带C</td>
 </tr>
 <tr>
-<td>工艺（运动）型</td>
+<td align="left">工艺（运动）型</td>
 <td>带T</td>
 </tr>
 <tr>
-<td>故障安全型</td>
+<td align="left">故障安全型</td>
 <td>带F</td>
 </tr>
 <tr>
-<td>冗余型</td>
+<td align="left">冗余型</td>
 <td>带H或R</td>
 </tr>
 </tbody></table>
@@ -518,17 +521,275 @@ inputArea.onfocus = function(){ getSearchFile()
 <li><p>总结：</p>
 </li>
 </ol>
-<h2 id="第四节：-软件基础操作"><a href="#第四节：-软件基础操作" class="headerlink" title="第四节： 软件基础操作"></a>第四节： 软件基础操作</h2><ul>
-<li><p>4.1. 下载</p>
+<h2 id="第四节：软件基础操作"><a href="#第四节：软件基础操作" class="headerlink" title="第四节：软件基础操作"></a>第四节：软件基础操作</h2><ul>
+<li><p>4.1 下载</p>
 <p>  1）在CPU上右击PLC-&gt;下载到设备-&gt;硬件配置<br>  2）程序更新选择“软件（全部下载）”</p>
 </li>
-<li><p>4.2. 上传</p>
+<li><p>4.2 上传</p>
 <p>  4.2.1 菜单栏“在线”-&gt;将设备作为新站上传</p>
 <p>  4.2.2 添加设备-&gt;CPU-&gt;非指定的CPU-&gt;获取</p>
 </li>
 </ul>
-<p>PG&#x2F;PC接口：
-    </p>
+<p>Tips：	PG&#x2F;PC接口：PN&#x2F;IE</p>
+<ul>
+<li><p>4.3 起保停</p>
+<p>  1）右击“重命名变量”。<br>  2）下载“硬件配置”。</p>
+</li>
+<li><p>4.4 仿真</p>
+</li>
+</ul>
+<h2 id="第五节：数据类型"><a href="#第五节：数据类型" class="headerlink" title="第五节：数据类型"></a>第五节：数据类型</h2><ul>
+<li><p>5.1 SMART数据类型</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>类型</th>
+<th>符号</th>
+<th>位数</th>
+<th>存储区</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>位(bit)</td>
+<td>BOOL</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>字节</td>
+<td>byte</td>
+<td>8位</td>
+<td>IB0 VB0 QB0 MB0 QB0</td>
+<td>非负数</td>
+</tr>
+<tr>
+<td>3</td>
+<td>字</td>
+<td>WORD</td>
+<td>16位</td>
+<td>IW0</td>
+<td>非负数</td>
+</tr>
+<tr>
+<td>4</td>
+<td>双字</td>
+<td>DWORD</td>
+<td>32位</td>
+<td>VD0</td>
+<td>非负数</td>
+</tr>
+<tr>
+<td>5</td>
+<td>双整数</td>
+<td>DINT</td>
+<td>32位</td>
+<td>&#x2F;</td>
+<td>有正负</td>
+</tr>
+<tr>
+<td>6</td>
+<td>浮点数</td>
+<td>REAL</td>
+<td>32位</td>
+<td>VD</td>
+<td>有正负</td>
+</tr>
+<tr>
+<td>7</td>
+<td>TIME</td>
+<td>&#x2F;</td>
+<td>32位</td>
+<td>&#x2F;</td>
+<td>-24天~24天</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>5.2 新增类型</p>
+<p>  |序号	|符号	|位数	|备注	|<br>  |–|–|–|–|–|–|<br>  |1		|USINT	|8位		|0-255	|<br>  |2		|UINT	|16位	|0-65535	|<br>  |3		|UDINT	|32位	|	无	|<br>  |4		|SINT	|8位		|	无	|<br>  |5		|LREAL	|64位	|	无	|</p>
+</li>
+<li><p>5.3 分类</p>
+<ol>
+<li>基本数据类型</li>
+<li>复杂数据类型</li>
+<li>自定义（结构）</li>
+</ol>
+</li>
+<li><p>5.4 DB块（数据块）</p>
+<p>  数据类型、存储区、寻址方式</p>
+<p>  寻址方式：直接寻址（在指令给出存储器或寄存器）、立即寻址（数据以常量的形式出现在指令中）、间接寻址（使用地址指针给出要访问的存储区或寄存器地址，通讯中常见）</p>
+<ul>
+<li>1 DB块有1位，8位，16位，32位。</li>
+<li>2 添加新块 -&gt; 全局DB -&gt; 属性&#x2F;取消优化</li>
+</ul>
+<p>  偏移量就是地址。
+  </p>
+</li>
+<li><p>5.5 置位、复位</p>
+<ul>
+<li>5.5.1 常开、常闭、线圈</li>
+<li>5.5.2 取反NOT、取反线圈</li>
+<li>5.5.3 置位和复位</li>
+<li>5.5.4 置位位域、复位位域</li>
+<li>5.5.5 SR和RS指令</li>
+<li>5.5.6 上升沿、下降沿</li>
+</ul>
+</li>
+</ul>
+<h2 id="第六节：定时器和计数器"><a href="#第六节：定时器和计数器" class="headerlink" title="第六节：定时器和计数器"></a>第六节：定时器和计数器</h2><ul>
+<li><p>6.1 定时器和计数器</p>
+<ul>
+<li>1）种类：TON、TOF、TONR、TP（脉冲型：触发一次就开始计时，Q点得电，时间到，Q点失电）</li>
+<li>2）计数器：CTU、CTD、CTUD<blockquote>
+<p>建立方法：自动建立或手动建立DB块</p>
+</blockquote>
+</li>
+<li>3）PLC-&gt;常规-&gt;系统和时钟存储器</li>
+</ul>
+</li>
+<li><p>6.2</p>
+</li>
+</ul>
+<h2 id="第七节：功能指令"><a href="#第七节：功能指令" class="headerlink" title="第七节：功能指令"></a>第七节：功能指令</h2><ul>
+<li><p>7.1 传送</p>
+<ul>
+<li>1）MOVE、MOVE_BLK、FILL_BLK</li>
+<li>2）S7-1200只能以数组来传递数据。</li>
+<li>3）SWAP：交换（了解即可）</li>
+</ul>
+</li>
+<li><p>7.2 比较</p>
+<ul>
+<li>1）</li>
+</ul>
+<p>  <img src="/posts/5d7c375d/Compare.png" alt="比较指令">
+  </p>
+</li>
+<li><p>7.3 转换指令</p>
+<p>  <img src="/posts/5d7c375d/Trans.png" alt="转换指令"></p>
+<ul>
+<li>1）Convert：</li>
+</ul>
+</li>
+<li><p>7.4 数学函数（运算指令）</p>
+<ul>
+<li>1）CALCULATE：</li>
+</ul>
+</li>
+</ul>
+<h2 id="第八节：FC和FB（都是子程序）"><a href="#第八节：FC和FB（都是子程序）" class="headerlink" title="第八节：FC和FB（都是子程序）"></a>第八节：FC和FB（都是子程序）</h2><blockquote>
+<p>必须用main[OB1]调用</p>
+</blockquote>
+<ul>
+<li><p>8.1 FC（函数）（无背景DB）</p>
+<ul>
+<li>1）函数没有专用存储区</li>
+<li>2）分为带参（input、output、inout、temp、constant）和不带参</li>
+<li>3）经常用作不带参子程序</li>
+</ul>
+</li>
+<li><p>8.2 FB（函数块）（有专用背景DB）</p>
+<ul>
+<li>1）分为带参（input、output、inout、static、temp、constant）和不带参</li>
+<li>2）单个实例：调用一次，只为一个FB。</li>
+<li>3）FB可以保持循环扫描结果，FC不行。</li>
+</ul>
+</li>
+<li><p>8.3 OB（组织块）</p>
+</li>
+<li><p>8.4 DB（全局DB、背景DB）</p>
+</li>
+</ul>
+<h2 id="第九节：步进控制"><a href="#第九节：步进控制" class="headerlink" title="第九节：步进控制"></a>第九节：步进控制</h2><ul>
+<li><p>9.1 选型</p>
+<ul>
+<li>1）PLC、步进驱动器、电机</li>
+<li>2）伺服运动控制类型：PTO（脉冲，开环）（最多4个轴）、PROFIdrive（通信、闭环）（最多16个轴）、模拟量（闭环）（最多8个轴）</li>
+<li>3）1200所有Q点都能发脉冲</li>
+<li>4）PWM：脉宽调制。</li>
+<li>5）</li>
+</ul>
+</li>
+<li><p>9.2 接线</p>
+</li>
+<li><p>9.3 组态</p>
+<ul>
+<li>1）工艺对象-&gt;新增对象-&gt;运动控制-&gt;轴</li>
+<li>2）启动&#x2F;停止速度：设置的所有速度大于此速度。</li>
+<li>3）接近速度：快。回原点速度：慢。</li>
+<li>4）归为开关侧：在原点开关两边。</li>
+</ul>
+</li>
+<li><p>9.4 调试</p>
+</li>
+<li><p>9.5 程序</p>
+<ul>
+<li><p>1）启用轴[MC_Power]：</p>
+</li>
+<li><p>2）复位轴[MC_Reset]:</p>
+<ul>
+<li>确认错误。</li>
+</ul>
+</li>
+<li><p>3）回原点[MC_Home]:</p>
+<ul>
+<li>主动回原点（Mode &#x3D; 3）</li>
+</ul>
+<p>  自动执行回原点步骤。必须有限位开关</p>
+<ul>
+<li>被动回原点（Mode &#x3D; 2）</li>
+</ul>
+<p>  被动回原点期间，运动控制指令“MC_Home”不会执行任何回原点运动。用户需通过其它运动控制指令，执行这一步骤中所需的行进移动。检测到回原点开关时，轴即回原点。</p>
+<ul>
+<li>直接绝对回原点（Mode &#x3D; 0）</li>
+</ul>
+<p>  将当前的轴位置设置为参数“Position”的值。</p>
+<ul>
+<li>直接相对回原点（Mode &#x3D; 1）</li>
+</ul>
+<p>  将当前轴位置的偏移值设置为参数“Position”的值。（绝对＋相对）</p>
+</li>
+<li><p>4）暂停轴[MC_Halt]</p>
+</li>
+<li><p>5）绝对定位[MC_MoveAbsolute]</p>
+<ul>
+<li>定位指令用不用沿都可以</li>
+</ul>
+</li>
+<li><p>6）相对定位</p>
+</li>
+<li><p>7）手动[MC_MoveJog]：不能用沿触发</p>
+</li>
+<li><p>8）</p>
+</li>
+</ul>
+</li>
+<li><p>9.6 细节 </p>
+<ul>
+<li>位置和速度信息在轴的DB编辑器中。</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十节：编码器和高速计数器"><a href="#第十节：编码器和高速计数器" class="headerlink" title="第十节：编码器和高速计数器"></a>第十节：编码器和高速计数器</h2><ul>
+<li><p>10.1 硬件</p>
+<ul>
+<li>1）</li>
+</ul>
+</li>
+<li><p>10.2 组态</p>
+<ul>
+<li>1）启用高速计数器</li>
+<li>2）计数、单相、</li>
+<li>3）滤波：在数字量输入-&gt;0.1 microsec</li>
+</ul>
+</li>
+<li><p>10.硬件门和软件门</p>
+</li>
+</ul>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
     
 
@@ -546,10 +807,10 @@ inputArea.onfocus = function(){ getSearchFile()
 		 
 		 <a href="/posts/5d7c375d.html" class="article-updated">
 		
-        <time updatedtime="2024-05-09T15:02:57.547Z" itemprop="updatedPublished">
+        <time updatedtime="2024-05-22T14:51:38.528Z" itemprop="updatedPublished">
  		
 		
-		<strong><font color=black>更新日期： </strong>2024-05-09</time>
+		<strong><font color=black>更新日期： </strong>2024-05-22</time>
 </a>
 	
 		  
@@ -701,7 +962,7 @@ inputArea.onfocus = function(){ getSearchFile()
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-number">1.</span> <span class="toc-text">第一节：区别对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A1200-%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">第二节：1200 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A1500-%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">第三节：1500 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A-%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">第四节： 软件基础操作</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-number">1.</span> <span class="toc-text">第一节：区别对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A1200-%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">第二节：1200 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A1500-%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">第三节：1500 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">第四节：软件基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">第五节：数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82%EF%BC%9A%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">第六节：定时器和计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">第七节：功能指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82%EF%BC%9AFC%E5%92%8CFB%EF%BC%88%E9%83%BD%E6%98%AF%E5%AD%90%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">第八节：FC和FB（都是子程序）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82%EF%BC%9A%E6%AD%A5%E8%BF%9B%E6%8E%A7%E5%88%B6"><span class="toc-number">9.</span> <span class="toc-text">第九节：步进控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E8%8A%82%EF%BC%9A%E7%BC%96%E7%A0%81%E5%99%A8%E5%92%8C%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">第十节：编码器和高速计数器</span></a></li></ol>
                     </div>
                 </span>
             </div>
