@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://bigpina.github.io/posts/5d7c375d/Compare.png">
 <meta property="og:image" content="http://bigpina.github.io/posts/5d7c375d/Trans.png">
 <meta property="article:published_time" content="2024-04-28T15:51:10.000Z">
-<meta property="article:modified_time" content="2024-05-22T14:51:38.528Z">
+<meta property="article:modified_time" content="2024-05-29T14:39:52.947Z">
 <meta property="article:author" content="🍍大菠萝">
 <meta property="article:tag" content="Siemens">
 <meta property="article:tag" content="PLC">
@@ -201,7 +201,7 @@ inputArea.onfocus = function(){ getSearchFile()
 			</div>
 		<div>
 		<nav>
-			<font size=2px>总文章数 33
+			<font size=2px>总文章数 34
 		</nav>
 		</div>
 		<nav>
@@ -397,7 +397,7 @@ inputArea.onfocus = function(){ getSearchFile()
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.6k字</span>
+      <span class="post-count">2.2k字</span>
     </span>
   </span>
 
@@ -406,7 +406,7 @@ inputArea.onfocus = function(){ getSearchFile()
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">6分</span>
+      <span class="post-count">8分</span>
     </span>
   </span>
 </div>
@@ -775,19 +775,112 @@ inputArea.onfocus = function(){ getSearchFile()
 </li>
 </ul>
 <h2 id="第十节：编码器和高速计数器"><a href="#第十节：编码器和高速计数器" class="headerlink" title="第十节：编码器和高速计数器"></a>第十节：编码器和高速计数器</h2><ul>
-<li><p>10.1 硬件</p>
-<ul>
+<li>10.1 硬件<ul>
 <li>1）</li>
 </ul>
 </li>
-<li><p>10.2 组态</p>
-<ul>
+<li>10.2 组态<ul>
 <li>1）启用高速计数器</li>
-<li>2）计数、单相、</li>
+<li>2）计数、单相、硬件输入</li>
 <li>3）滤波：在数字量输入-&gt;0.1 microsec</li>
+<li>4）门输入：相当于外部按钮（不能用强制），启用或禁用计数。硬件输入中选择门输入。</li>
+<li>5）同步输入：相当于外部按钮复位或清零。</li>
 </ul>
 </li>
-<li><p>10.硬件门和软件门</p>
+<li>10.3 指令<ul>
+<li>1）控制高速计数器：</li>
+<li>2）扩展高速计数器：HSC（HSC标识符）、CTRL（数据类型 Vari）<ul>
+<li>新建DB块，新建数据类型HSC_Count</li>
+<li>EnHSC：计数使能。</li>
+<li>CurrentCount：当前计数值。</li>
+<li>Ensync：复位计数器。必须和同步输入同时执行。</li>
+<li>组态完成后需要指令。</li>
+</ul>
+</li>
+<li>3）编码器断电保持：<ul>
+<li>DB块中勾选保持</li>
+<li>添加控制功能，按下启动就传入保持值。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十一节：开放式TCPIP通信、S7通信"><a href="#第十一节：开放式TCPIP通信、S7通信" class="headerlink" title="第十一节：开放式TCPIP通信、S7通信"></a>第十一节：开放式TCPIP通信、S7通信</h2><ul>
+<li><p>11.1 开放式TCPIP通信</p>
+<ul>
+<li>1）组态plc，勾选时钟存储器</li>
+<li>2）连接机制：PUT&#x2F;GET访问</li>
+<li>3）组态另一台PLC，步骤同1）、2） </li>
+<li>4）PLC在同一个网段：网络视图</li>
+</ul>
+</li>
+<li><p>11.2 指令</p>
+<ul>
+<li><p>1）TSEND_C：点开右上角组态。连接数据：新建。</p>
+<ul>
+<li>REQ：选择脉冲</li>
+</ul>
+</li>
+<li><p>2）TRCV_C：点开右上角组态。</p>
+<ul>
+<li>EN_R：</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>11.3 拓展 </p>
+<ul>
+<li>1）P#DB0.DBX0.0 REAL（数据类型） 1（个数）</li>
+</ul>
+</li>
+<li><p>11.3 S7通信（西门子产品）</p>
+<ul>
+<li>1）组态，时钟，PUT&#x2F;GET</li>
+<li>2）网络视图</li>
+<li>3）一台PLC建立DB1，建立一个位，作为发送，调用PUT指令</li>
+<li>4）另一台建立DB1，建立1个位，作为接收，不需要调用指令</li>
+<li>5）PUT：SD_1（发送到ADDR_1)（发送端地址）、ADDR_1（接收端地址）</li>
+<li>6）GET：</li>
+<li>7）SMART中只能传到V区，代号DB1.DBX0.0 REAL 1</li>
+</ul>
+</li>
+<li><p>11.4 多条通讯指令</p>
+<ul>
+<li>1）上一条通信完成位触发下一条指令。</li>
+<li>2）都用脉冲触发。</li>
+</ul>
+</li>
+<li><p>11.5 建议</p>
+<ul>
+<li>1）网口通讯，最少以字节为单位。</li>
+<li>2）串口通信，最少以16位为单位。</li>
+<li>3）设置M断电保持，多次下载后空间会出现已满的情况。DB区断电后不会出现。</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="第十二节：常用操作"><a href="#第十二节：常用操作" class="headerlink" title="第十二节：常用操作"></a>第十二节：常用操作</h2><ul>
+<li>12.1 恢复出厂设置<ul>
+<li>1）新的内存卡，断电插入。</li>
+<li>2）软件恢复：在线访问-&gt;网卡-&gt;更新可访问设备-&gt;PLC-&gt;在线和诊断-&gt;功能-&gt;复位为出厂设置-&gt;重置</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十三节：分布式（远程IO）"><a href="#第十三节：分布式（远程IO）" class="headerlink" title="第十三节：分布式（远程IO）"></a>第十三节：分布式（远程IO）</h2><ul>
+<li>13.1 选型<ul>
+<li>1）ET200SP（32个模块，不需要额外电源）、ET200MP、ET200M（用于300系列）、ET200S（64个，每6-8添加一个电源模块）</li>
+<li>2）<ul>
+<li>BA：基本型；</li>
+<li>ST：标准型；IM155-6PN SI</li>
+<li>HF：增强型；</li>
+<li>HS：高速型；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>13.2 组态<ul>
+<li></li>
+</ul>
 </li>
 </ul>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
@@ -807,10 +900,10 @@ inputArea.onfocus = function(){ getSearchFile()
 		 
 		 <a href="/posts/5d7c375d.html" class="article-updated">
 		
-        <time updatedtime="2024-05-22T14:51:38.528Z" itemprop="updatedPublished">
+        <time updatedtime="2024-05-29T14:39:52.947Z" itemprop="updatedPublished">
  		
 		
-		<strong><font color=black>更新日期： </strong>2024-05-22</time>
+		<strong><font color=black>更新日期： </strong>2024-05-29</time>
 </a>
 	
 		  
@@ -962,7 +1055,7 @@ inputArea.onfocus = function(){ getSearchFile()
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-number">1.</span> <span class="toc-text">第一节：区别对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A1200-%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">第二节：1200 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A1500-%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">第三节：1500 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">第四节：软件基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">第五节：数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82%EF%BC%9A%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">第六节：定时器和计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">第七节：功能指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82%EF%BC%9AFC%E5%92%8CFB%EF%BC%88%E9%83%BD%E6%98%AF%E5%AD%90%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">第八节：FC和FB（都是子程序）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82%EF%BC%9A%E6%AD%A5%E8%BF%9B%E6%8E%A7%E5%88%B6"><span class="toc-number">9.</span> <span class="toc-text">第九节：步进控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E8%8A%82%EF%BC%9A%E7%BC%96%E7%A0%81%E5%99%A8%E5%92%8C%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">第十节：编码器和高速计数器</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-number">1.</span> <span class="toc-text">第一节：区别对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A1200-%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">第二节：1200 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A1500-%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">第三节：1500 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">第四节：软件基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">第五节：数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82%EF%BC%9A%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">第六节：定时器和计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">第七节：功能指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82%EF%BC%9AFC%E5%92%8CFB%EF%BC%88%E9%83%BD%E6%98%AF%E5%AD%90%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">第八节：FC和FB（都是子程序）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82%EF%BC%9A%E6%AD%A5%E8%BF%9B%E6%8E%A7%E5%88%B6"><span class="toc-number">9.</span> <span class="toc-text">第九节：步进控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E8%8A%82%EF%BC%9A%E7%BC%96%E7%A0%81%E5%99%A8%E5%92%8C%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">第十节：编码器和高速计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E8%8A%82%EF%BC%9A%E5%BC%80%E6%94%BE%E5%BC%8FTCPIP%E9%80%9A%E4%BF%A1%E3%80%81S7%E9%80%9A%E4%BF%A1"><span class="toc-number">11.</span> <span class="toc-text">第十一节：开放式TCPIP通信、S7通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%8A%82%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">12.</span> <span class="toc-text">第十二节：常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E8%8A%82%EF%BC%9A%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%88%E8%BF%9C%E7%A8%8BIO%EF%BC%89"><span class="toc-number">13.</span> <span class="toc-text">第十三节：分布式（远程IO）</span></a></li></ol>
                     </div>
                 </span>
             </div>
