@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://bigpina.github.io/posts/5d7c375d/Compare.png">
 <meta property="og:image" content="http://bigpina.github.io/posts/5d7c375d/Trans.png">
 <meta property="article:published_time" content="2024-04-28T15:51:10.000Z">
-<meta property="article:modified_time" content="2024-05-29T14:39:52.947Z">
+<meta property="article:modified_time" content="2024-06-04T16:15:22.945Z">
 <meta property="article:author" content="🍍大菠萝">
 <meta property="article:tag" content="Siemens">
 <meta property="article:tag" content="PLC">
@@ -397,7 +397,7 @@ inputArea.onfocus = function(){ getSearchFile()
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">2.2k字</span>
+      <span class="post-count">3.2k字</span>
     </span>
   </span>
 
@@ -406,7 +406,7 @@ inputArea.onfocus = function(){ getSearchFile()
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">8分</span>
+      <span class="post-count">12分</span>
     </span>
   </span>
 </div>
@@ -764,7 +764,7 @@ inputArea.onfocus = function(){ getSearchFile()
 </li>
 <li><p>7）手动[MC_MoveJog]：不能用沿触发</p>
 </li>
-<li><p>8）</p>
+<li><p>8）恒速[MC_MoveVelocity]</p>
 </li>
 </ul>
 </li>
@@ -879,7 +879,153 @@ inputArea.onfocus = function(){ getSearchFile()
 </ul>
 </li>
 <li>13.2 组态<ul>
-<li></li>
+<li>1）RTD：热电阻。TC：热电偶。</li>
+<li>2）浅色底座需要接电源，深色不需要。</li>
+<li>3）模拟量输出模块2个一组，一正一负。</li>
+<li>4）</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十四节：变频器MODBUS-RTU通信"><a href="#第十四节：变频器MODBUS-RTU通信" class="headerlink" title="第十四节：变频器MODBUS RTU通信"></a>第十四节：变频器MODBUS RTU通信</h2><ul>
+<li><p>14.1 硬件</p>
+</li>
+<li><p>14.2 指令</p>
+<ul>
+<li>1）Modbus_Comm_Load：主站定义参数</li>
+<li>2）Modbus_Master：主站读写</li>
+<li>3）Modbus_Slave：从站定义</li>
+</ul>
+</li>
+<li><p>14.3</p>
+<ul>
+<li>1）打开时钟存储位和系统存储位</li>
+<li>2）添加模块</li>
+<li>3）半双工：发完才能收，485使用。全双工：可同时发收。</li>
+<li>4）H代表16进制</li>
+<li>5）2101H，实际写地址转成10进制加40001</li>
+</ul>
+</li>
+<li><p>14.4 变频器核心参数（每种变频器不一样）</p>
+<ul>
+<li>n2.00&#x3D;4 （运行来自通讯指令有效）</li>
+<li>n2.01&#x3D;3 （频率来自通讯指令有效）</li>
+<li>n9.00&#x3D;3 （站号）</li>
+<li>n9.01&#x3D;1 （波特率）</li>
+</ul>
+</li>
+<li><p>14.5 串口接线</p>
+<ul>
+<li>232：3对应RJ45：5</li>
+<li>232：8对应RJ45：4</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十五节：V90伺服"><a href="#第十五节：V90伺服" class="headerlink" title="第十五节：V90伺服"></a>第十五节：V90伺服</h2><ul>
+<li><p>驱动器功率等于或略大于伺服功率。</p>
+</li>
+<li><p>15.1 硬件接线</p>
+<ul>
+<li>电源220V、</li>
+<li>位置模式：。速度模式：。</li>
+</ul>
+</li>
+<li><p>15.2 V90调试软件（V-ASSISTANT)</p>
+<ul>
+<li>1）打开后，工具-&gt;恢复出厂值</li>
+<li>2）选择驱动器和电机</li>
+<li>3）标准报文3，可以用步进的指令</li>
+<li>4）PN站名和IP需要和PLC中的一致</li>
+<li>5）设置完成下载到驱动器，工具-&gt;保存参数到ROM</li>
+<li>6）使能，点动测试</li>
+</ul>
+</li>
+<li><p>15.3 V90组态</p>
+<ul>
+<li>1）打开允许远程PUT\GET访问</li>
+<li>2）添加V90伺服后（其他现场设备），子模块-标准报文3</li>
+<li>3）改IP、站名，用网线连接</li>
+</ul>
+</li>
+<li><p>15.4 调试和程序编写</p>
+<ul>
+<li>1）添加工艺对象，设置参数</li>
+<li>2）下载硬件，调试轴</li>
+<li>3）在DB编辑器查看参数</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十六节：模拟量"><a href="#第十六节：模拟量" class="headerlink" title="第十六节：模拟量"></a>第十六节：模拟量</h2><p>温度传感器-&gt;变送器-&gt;</p>
+<ul>
+<li>16.1 硬件和接线<ul>
+<li>1）通道0和1的信号要一致，都是电流或电压</li>
+<li>2）</li>
+<li>3）</li>
+</ul>
+</li>
+<li>16.2 组态<ul>
+<li>1）</li>
+</ul>
+</li>
+<li>16.3 指令<ul>
+<li>1）模拟量输入：</li>
+<li>2）模拟量输出：电流不允许开路</li>
+<li>3）标准化、缩放</li>
+</ul>
+</li>
+<li>16.4 控制变频器</li>
+</ul>
+<h2 id="第十七节：PID恒液位调节"><a href="#第十七节：PID恒液位调节" class="headerlink" title="第十七节：PID恒液位调节"></a>第十七节：PID恒液位调节</h2><p>比例、积分、微分</p>
+<ul>
+<li>17.1 硬件和接线<ul>
+<li>1）输入端：液位传感器正接24V，负接AI正极，AI负极与0V连接。</li>
+<li>2）输出端：0M（-）接变频器AC，0（+）接变频器A1。</li>
+</ul>
+</li>
+<li>17.2 指令<ul>
+<li>1）工艺对象-&gt;新增对象-&gt;选第一个</li>
+<li>2）右侧工具栏-&gt;PID</li>
+<li>3）管脚：<br>  setpoint：设定值<br>  input：测量值<br>  output-PER：模拟量输出<br>  *4）PID要写在OB30（循环中断）里。</li>
+</ul>
+</li>
+<li>17.3 组态<ul>
+<li>1）重启后：自动模式</li>
+<li>2）过程值。</li>
+</ul>
+</li>
+<li>17.4 调试<ul>
+<li>1）测量开始</li>
+<li>2）选调节模式，先预调节，再精确调节</li>
+<li>3）稳定后，参数下载到PLC</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十八节：触摸屏"><a href="#第十八节：触摸屏" class="headerlink" title="第十八节：触摸屏"></a>第十八节：触摸屏</h2><p>先写程序，再做画面。</p>
+<ul>
+<li>18.1 硬件<ul>
+<li>1）博图屏（用博图软件）、SMART屏（专用软件）、WinCC（上位机）（WinCC7.5和博图WinCC）</li>
+<li>2）博图屏分类：串口不能仿真</li>
+<li>3）选择允许远程对象通信访问</li>
+<li>4）</li>
+</ul>
+</li>
+<li>18.2 添加组件（按钮、指示灯、I&#x2F;O域、切换画面、报警）<ul>
+<li>1）文本格式改变字体大小</li>
+<li>2）常规中改文字内容</li>
+<li>3）事件-&gt;按下-&gt;添加函数-&gt;编辑为-&gt;置位位、释放-&gt;复位位</li>
+<li>4）写入失败：设置PG&#x2F;PC接口-&gt;选择实际网卡</li>
+<li>5）在触摸屏变量表中更改触摸屏变量采集周期</li>
+<li>6）DB块中的变量可以不取消优化</li>
+<li>7）在外观中可以添加单位</li>
+<li>8）切换页面：事件-&gt;按下-&gt;激活屏幕</li>
+</ul>
+</li>
+<li>18.3 报警（离散量【开关量】、模拟量）<ul>
+<li>1）首先建立16位地址、选择触发位</li>
+<li>2）</li>
+</ul>
+</li>
+<li>18.4 PC station（上位机）<ul>
+<li>1）运行系统设置&gt;&gt;全屏模式（取消勾选）&gt;&gt;</li>
 </ul>
 </li>
 </ul>
@@ -900,10 +1046,10 @@ inputArea.onfocus = function(){ getSearchFile()
 		 
 		 <a href="/posts/5d7c375d.html" class="article-updated">
 		
-        <time updatedtime="2024-05-29T14:39:52.947Z" itemprop="updatedPublished">
+        <time updatedtime="2024-06-04T16:15:22.945Z" itemprop="updatedPublished">
  		
 		
-		<strong><font color=black>更新日期： </strong>2024-05-29</time>
+		<strong><font color=black>更新日期： </strong>2024-06-05</time>
 </a>
 	
 		  
@@ -1055,7 +1201,7 @@ inputArea.onfocus = function(){ getSearchFile()
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-number">1.</span> <span class="toc-text">第一节：区别对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A1200-%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">第二节：1200 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A1500-%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">第三节：1500 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">第四节：软件基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">第五节：数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82%EF%BC%9A%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">第六节：定时器和计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">第七节：功能指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82%EF%BC%9AFC%E5%92%8CFB%EF%BC%88%E9%83%BD%E6%98%AF%E5%AD%90%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">第八节：FC和FB（都是子程序）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82%EF%BC%9A%E6%AD%A5%E8%BF%9B%E6%8E%A7%E5%88%B6"><span class="toc-number">9.</span> <span class="toc-text">第九节：步进控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E8%8A%82%EF%BC%9A%E7%BC%96%E7%A0%81%E5%99%A8%E5%92%8C%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">第十节：编码器和高速计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E8%8A%82%EF%BC%9A%E5%BC%80%E6%94%BE%E5%BC%8FTCPIP%E9%80%9A%E4%BF%A1%E3%80%81S7%E9%80%9A%E4%BF%A1"><span class="toc-number">11.</span> <span class="toc-text">第十一节：开放式TCPIP通信、S7通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%8A%82%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">12.</span> <span class="toc-text">第十二节：常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E8%8A%82%EF%BC%9A%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%88%E8%BF%9C%E7%A8%8BIO%EF%BC%89"><span class="toc-number">13.</span> <span class="toc-text">第十三节：分布式（远程IO）</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-number">1.</span> <span class="toc-text">第一节：区别对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A1200-%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">第二节：1200 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A1500-%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">第三节：1500 硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">第四节：软件基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">第五节：数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82%EF%BC%9A%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">第六节：定时器和计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">第七节：功能指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82%EF%BC%9AFC%E5%92%8CFB%EF%BC%88%E9%83%BD%E6%98%AF%E5%AD%90%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">第八节：FC和FB（都是子程序）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82%EF%BC%9A%E6%AD%A5%E8%BF%9B%E6%8E%A7%E5%88%B6"><span class="toc-number">9.</span> <span class="toc-text">第九节：步进控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E8%8A%82%EF%BC%9A%E7%BC%96%E7%A0%81%E5%99%A8%E5%92%8C%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">第十节：编码器和高速计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E8%8A%82%EF%BC%9A%E5%BC%80%E6%94%BE%E5%BC%8FTCPIP%E9%80%9A%E4%BF%A1%E3%80%81S7%E9%80%9A%E4%BF%A1"><span class="toc-number">11.</span> <span class="toc-text">第十一节：开放式TCPIP通信、S7通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%8A%82%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">12.</span> <span class="toc-text">第十二节：常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E8%8A%82%EF%BC%9A%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%88%E8%BF%9C%E7%A8%8BIO%EF%BC%89"><span class="toc-number">13.</span> <span class="toc-text">第十三节：分布式（远程IO）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E8%8A%82%EF%BC%9A%E5%8F%98%E9%A2%91%E5%99%A8MODBUS-RTU%E9%80%9A%E4%BF%A1"><span class="toc-number">14.</span> <span class="toc-text">第十四节：变频器MODBUS RTU通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E8%8A%82%EF%BC%9AV90%E4%BC%BA%E6%9C%8D"><span class="toc-number">15.</span> <span class="toc-text">第十五节：V90伺服</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E8%8A%82%EF%BC%9A%E6%A8%A1%E6%8B%9F%E9%87%8F"><span class="toc-number">16.</span> <span class="toc-text">第十六节：模拟量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E8%8A%82%EF%BC%9APID%E6%81%92%E6%B6%B2%E4%BD%8D%E8%B0%83%E8%8A%82"><span class="toc-number">17.</span> <span class="toc-text">第十七节：PID恒液位调节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E8%8A%82%EF%BC%9A%E8%A7%A6%E6%91%B8%E5%B1%8F"><span class="toc-number">18.</span> <span class="toc-text">第十八节：触摸屏</span></a></li></ol>
                     </div>
                 </span>
             </div>
