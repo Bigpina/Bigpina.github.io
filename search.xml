@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title>Avalonia</title>
+      <link href="/posts/3f413ee7.html"/>
+      <url>/posts/3f413ee7.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><h3 id="Avalonia不显示中文"><a href="#Avalonia不显示中文" class="headerlink" title="Avalonia不显示中文"></a>Avalonia不显示中文</h3><p>下载字体后放入Assets文件夹，然后引用字体。</p><p><code>FontFamily=&quot;avares://AvaloniaApplication1/Assets/#MicroSoft Yahei&quot;</code></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Avalonia </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>程序：打开不同类型文件</title>
+      <link href="/posts/2da389c1.html"/>
+      <url>/posts/2da389c1.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无 </p></blockquote><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">namespace 打开文件程序</span><br><span class="line">&#123;</span><br><span class="line">    internal class Program</span><br><span class="line">    &#123;</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;请选择要进入的磁盘&quot;);</span><br><span class="line">            string path = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(&quot;请选择要打开的文件&quot;);</span><br><span class="line">            string fileName = Console.ReadLine();</span><br><span class="line">            string filePath = path + fileName;</span><br><span class="line">            //里氏转换,将子类赋值给父类</span><br><span class="line">            OpenFile openFile = GetFile(fileName);</span><br><span class="line">            //调用文件打开方法</span><br><span class="line">            openFile.Open(filePath);</span><br><span class="line">        &#125;</span><br><span class="line">        //简单工厂设计模式，根据文件类型不同，返回不同的子类</span><br><span class="line">        public static OpenFile GetFile(string fileName)</span><br><span class="line">        &#123;</span><br><span class="line">            //建立一个父类</span><br><span class="line">            OpenFile openFile = null;</span><br><span class="line">            //获取文件后缀</span><br><span class="line">            string fileType = fileName.Substring(fileName.LastIndexOf(&#x27;.&#x27;) + 1, 3);</span><br><span class="line">            //根据文件类型确定子类</span><br><span class="line">            switch (fileType)</span><br><span class="line">            &#123;</span><br><span class="line">                case &quot;txt&quot;:</span><br><span class="line">                    openFile = new TxtOpen();</span><br><span class="line">                    break;</span><br><span class="line">                default:</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">            return openFile;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// 父类</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public class OpenFile</span><br><span class="line">    &#123;</span><br><span class="line">        string _fileName;</span><br><span class="line">        public string FileName</span><br><span class="line">        &#123; get; set; &#125;</span><br><span class="line">        string _path;</span><br><span class="line">    </span><br><span class="line">        public OpenFile()</span><br><span class="line">        &#123;</span><br><span class="line">            //this._path = filePath;</span><br><span class="line">        &#125;</span><br><span class="line">        public void Open(string filePath)</span><br><span class="line">        &#123;</span><br><span class="line">            ProcessStartInfo psi = new ProcessStartInfo(filePath);</span><br><span class="line">            Process p = new Process();</span><br><span class="line">            p.StartInfo = psi;</span><br><span class="line">            p.Start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// 子类</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public class TxtOpen : OpenFile</span><br><span class="line">    &#123;</span><br><span class="line">        public TxtOpen()</span><br><span class="line">        &#123;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计模式</title>
+      <link href="/posts/364ea8cc.html"/>
+      <url>/posts/364ea8cc.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><h3 id="1-简单工厂"><a href="#1-简单工厂" class="headerlink" title="1. 简单工厂"></a>1. 简单工厂</h3><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>进阶：S7-1500</title>
+      <link href="/posts/5e62758.html"/>
+      <url>/posts/5e62758.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简介：无</p></blockquote><span id="more"></span><h2 id="第一节：1500和1200区别"><a href="#第一节：1500和1200区别" class="headerlink" title="第一节：1500和1200区别"></a>第一节：1500和1200区别</h2><ul><li>1.1 硬件特性<ul><li>1）1500最多拓展30个模块</li><li>2）1500位指令执行速度更快</li><li>3）200个点（SMART）1000个点（1200）1000个点以上（1500）</li><li></li></ul></li></ul><h2 id="第二节：分类"><a href="#第二节：分类" class="headerlink" title="第二节：分类"></a>第二节：分类</h2><ul><li>PN（网口）、DP（串口）</li><li>无字（标准型）、C（紧凑型）、T（工艺型）、F（故障安全型）、R或H（冗余型）</li><li>运行灯、故障灯、数据灯（由左至右）</li></ul><h2 id="第三节：硬件实物"><a href="#第三节：硬件实物" class="headerlink" title="第三节：硬件实物"></a>第三节：硬件实物</h2><ul><li><p>3.1 数字量输入模块</p><ul><li>HF代表高性能，带有高速计数</li><li>BA代表基本型、ST标准型</li></ul></li><li><p>3.2 数字量输出模块</p><ul><li>例子：1接KA的14，13出来接负</li><li>属性-&gt;通道模板-&gt;诊断</li></ul></li><li><p>3.3 模拟量输入模块</p></li><li><p>3.4 模拟量输出模块</p><ul><li>查看说明书</li></ul></li><li><p>3.5 高速计数器</p><ul><li>编码器接入到高性能DI模块（只有通道0和通道1有）或专用计数器模块</li><li>启用0通道和1通道上的计数器</li><li>启用后会出现输出地址</li><li>字节X+4到X+11对应通道0</li><li>从IBX+4的4个字节，代表当前计数值</li><li>IBX+8，代表状态区，IB(X+8).0达到条件后输出，置1</li><li>设置初始值：</li><li>输出：<ul><li>X+0到X+7对应通道0输出。X+4是状态区QB(X+4)<br>  *【 QB(X+4).2，QB(X+4).1，QB(X+4).0】000无操作，001装载计数值，011装载起始值（初始值是上次计数值）</li><li>软件门：QB(X+4).3，0停止，1启动</li></ul></li><li>高速计数器模块：工艺<ul><li>A0, B0, [接黑白]</li><li>N0, DI, DQ</li><li>西门子NPN是源型</li></ul></li></ul></li></ul><h2 id="第四节：通信"><a href="#第四节：通信" class="headerlink" title="第四节：通信"></a>第四节：通信</h2><ul><li>4.1 1500与1200<br>  * </li><li>4.2 1500与1500<br>  * </li><li>4.3 触摸屏<ul><li></li></ul></li></ul><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 无 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>汇川伺服调试参数</title>
       <link href="/posts/2d48590f.html"/>
       <url>/posts/2d48590f.html</url>
@@ -587,7 +663,7 @@
       <link href="/posts/37b07429.html"/>
       <url>/posts/37b07429.html</url>
       
-        <content type="html"><![CDATA[<blockquote><p>对压电元件进行阻抗分析，获得压电元件的阻抗特性</p></blockquote><span id="more"></span><h1 id="1-创建阻抗分析项目"><a href="#1-创建阻抗分析项目" class="headerlink" title="1.创建阻抗分析项目"></a>1.创建阻抗分析项目</h1><p>  打开workbench，在左侧分析系统找到“Harmonic Response”，即“谐响应模块”。建立谐响应分析。<br><img src="/posts/37b07429/1.png"></p><h1 id="2-首先定义所需的材料"><a href="#2-首先定义所需的材料" class="headerlink" title="2.首先定义所需的材料"></a>2.首先定义所需的材料</h1><p>  常见材料在ANSYS材料库中都有，如果没有需要的材料可以自定义。<br><img src="/posts/37b07429/2.png"></p><h1 id="3-模型导入"><a href="#3-模型导入" class="headerlink" title="3.模型导入"></a>3.模型导入</h1><p>  一般在其他三维软件中建立模型，导入进workbench中。<br><img src="/posts/37b07429/3.png"></p><h1 id="4-网格划分"><a href="#4-网格划分" class="headerlink" title="4.网格划分"></a>4.网格划分</h1><p>  主要方法为扫掠和自由划分，<br>  (1).</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<blockquote><p>对压电元件进行阻抗分析，获得压电元件的阻抗特性</p></blockquote><h1 id="1-创建阻抗分析项目"><a href="#1-创建阻抗分析项目" class="headerlink" title="1.创建阻抗分析项目"></a>1.创建阻抗分析项目</h1><p>  打开workbench，在左侧分析系统找到“Harmonic Response”，即“谐响应模块”。建立谐响应分析。<br><img src="/posts/37b07429/1.png"></p><span id="more"></span><h1 id="2-首先定义所需的材料"><a href="#2-首先定义所需的材料" class="headerlink" title="2.首先定义所需的材料"></a>2.首先定义所需的材料</h1><p>  常见材料在ANSYS材料库中都有，如果没有需要的材料可以自定义。<br><img src="/posts/37b07429/2.png"></p><h1 id="3-模型导入"><a href="#3-模型导入" class="headerlink" title="3.模型导入"></a>3.模型导入</h1><p>  一般在其他三维软件中建立模型，导入进workbench中。<br><img src="/posts/37b07429/3.png"></p><h1 id="4-网格划分"><a href="#4-网格划分" class="headerlink" title="4.网格划分"></a>4.网格划分</h1><p>  主要方法为扫掠和自由划分，<br>  (1).</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       
       
       
