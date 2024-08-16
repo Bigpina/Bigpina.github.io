@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>butterfly 更改顶图和背景</title>
+      <link href="/posts/eb83d88e.html"/>
+      <url>/posts/eb83d88e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Butterfly主题-一图流背景与顶部图修改"><a href="#Butterfly主题-一图流背景与顶部图修改" class="headerlink" title="Butterfly主题 一图流背景与顶部图修改"></a>Butterfly主题 一图流背景与顶部图修改</h1><p>配置参数：<br>index_img：网站背景<br>index_top_img_height：顶图高度<br>background：顶图背景<br>footer_bg：页脚背景<br>mask.header：遮罩<br>原文地址：<a href="https://android99.com/2021/08/10/butterfly-top-image-modify/">Butterfly主题 一图流背景与顶部图修改</a></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>butterfly 折腾合集</title>
+      <link href="/posts/5a9dcefa.html"/>
+      <url>/posts/5a9dcefa.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="butterfly-折腾合集"><a href="#butterfly-折腾合集" class="headerlink" title="butterfly 折腾合集"></a>butterfly 折腾合集</h1><p><a href="https://bigpina.github.io/posts/eb83d88e.html">1.更改顶图和背景</a></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ASP.NET core: 日志</title>
       <link href="/posts/fb2f0a84.html"/>
       <url>/posts/fb2f0a84.html</url>
@@ -14,7 +52,7 @@
       
         <tags>
             
-            <tag> 无 </tag>
+            <tag> ASP.net Core </tag>
             
         </tags>
       
