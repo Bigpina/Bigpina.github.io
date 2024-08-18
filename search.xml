@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>ASP.net Core: EF Core </title>
+      <link href="/posts/65a8c7d5.html"/>
+      <url>/posts/65a8c7d5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="4-EF-Core-基础"><a href="#4-EF-Core-基础" class="headerlink" title="4 EF Core 基础"></a>4 EF Core 基础</h1><h2 id="4-1-EF-Core-概述"><a href="#4-1-EF-Core-概述" class="headerlink" title="4.1 EF Core 概述"></a>4.1 EF Core 概述</h2><h3 id="4-1-1-ORM"><a href="#4-1-1-ORM" class="headerlink" title="4.1.1 ORM"></a>4.1.1 ORM</h3><p>实现双向转换</p><ol><li>对象：C#中的对象</li><li>关系：关系数据库</li><li>映射：在对象和关系数据库搭建桥梁。</li></ol><p>框架：EF Core、Dapper</p><h3 id="4-1-2-EF-Core-入门"><a href="#4-1-2-EF-Core-入门" class="headerlink" title="4.1.2 EF Core 入门"></a>4.1.2 EF Core 入门</h3><h4 id="4-1-2-1-搭建开发环境"><a href="#4-1-2-1-搭建开发环境" class="headerlink" title="4.1.2.1 搭建开发环境"></a>4.1.2.1 搭建开发环境</h4><ol><li><p>步骤：建实体类；建DbContext；生成数据库；编写调用EF Core代码。</p></li><li><p>Book.cs</p><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Book</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">long</span> Id &#123;<span class="keyword">get</span>; <span class="keyword">set</span>;&#125;<span class="comment">//主键</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Title &#123;<span class="keyword">get</span>; <span class="keyword">set</span>;&#125;<span class="comment">//标题</span></span><br><span class="line">    <span class="keyword">public</span> DateTime PubTime &#123;<span class="keyword">get</span>; <span class="keyword">set</span>;&#125;<span class="comment">//发布日期</span></span><br><span class="line">    <span class="keyword">public</span> Double Price &#123;<span class="keyword">get</span>; <span class="keyword">set</span>;&#125;<span class="comment">//单价</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>Install-Package Microsoft.EntityFrameworkCore.SqlServer -version 7.0.20 (.net 6.0)</p></li><li><p>配置实体类与数据库表对应关系</p> <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">BookConfig</span>:<span class="title">IEntityTypeConfiguration</span>&lt;<span class="title">Book</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">EntityTypeBuilder&lt;Book&gt; builder</span>)</span></span><br><span class="line">   &#123;</span><br><span class="line">       builder.ToTable(<span class="string">&quot;Book&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>创建继承自DbContext的类</p><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestDBContext</span>:<span class="title">DbContext</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> DbSet&lt;Book&gt; Books &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="comment">//连接字符串，指定链接的数据库</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnConfiguring</span>(<span class="params">DbContextOptionsBuilder optionsBuilder</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> connStr = <span class="string">&quot;Server=.;Database=demo1;Trusted_Connection=true&quot;</span>;</span><br><span class="line">        <span class="comment">//string connStr = “Server=localhost;Database=MyDatabase;User ID=myUsername;Password=myPassword”;</span></span><br><span class="line">        optionsBuilder.UseSqlServer(connStr);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//加载程序集中所有实现了IEntityTypeConfiguration接口的类</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnModelCreating</span>(<span class="params">ModelBuilder modelBuilder</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnModelCreating(modelBuilder);</span><br><span class="line">        modelBuilder.ApplyConfigurationsFromAssembly(<span class="keyword">this</span>.GetType().Assembly);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>Install-Package Microsoft EntityFrameworkCore.Tools</p></li><li><p>生成一次迁移，InitialCreate是迁移名称</p><p><code>Add-Migration InitialCreate</code></p></li><li><p>执行Update-database</p></li><li><p>修改表结构</p><p>1). 在Book类中添加字段</p><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">string</span> Nation &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;<span class="comment">//添加的列 </span></span><br></pre></td></tr></table></figure><p>重复8、9</p><p>2). 限制最大长度和不可为空，在5中添加以下代码</p><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">builder.Property(e=&gt;e.Title).HasMaxLength(<span class="number">50</span>).IsRequired();</span><br><span class="line">builder.Property(e=&gt;e.Id).HasMaxLength(<span class="number">20</span>).IsRequired();</span><br></pre></td></tr></table></figure><p>重复8、9</p></li></ol><h4 id="4-1-2-1-EF-Core-增删改查"><a href="#4-1-2-1-EF-Core-增删改查" class="headerlink" title="4.1.2.1 EF Core 增删改查"></a>4.1.2.1 EF Core 增删改查</h4><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 无 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据库1</title>
+      <link href="/posts/a0116265.html"/>
+      <url>/posts/a0116265.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-表的相关数据"><a href="#1-表的相关数据" class="headerlink" title="1 表的相关数据"></a>1 表的相关数据</h1><h2 id="1-1基础内容"><a href="#1-1基础内容" class="headerlink" title="1.1基础内容"></a>1.1基础内容</h2><ol><li>字段：一个事物的某一个特征</li><li>记录：字段的组合，表示一个具体的事物</li><li>表：记录的组合，表示同一类型事物的集合</li><li>1、2、3的关系：字段是事物的属性，记录是事物本身，表是事物的集合</li><li>列、属性、元组：分别是字段、字段、记录的另一种称谓</li><li>主键：唯一标识</li></ol><h2 id="1-1-2"><a href="#1-1-2" class="headerlink" title="1.1.2"></a>1.1.2</h2><p>右键设置主键</p><p>外键表：有外键字段的表</p><h3 id="1-1-3-MicroSoft-SQL-Server设置"><a href="#1-1-3-MicroSoft-SQL-Server设置" class="headerlink" title="1.1.3 MicroSoft SQL Server设置"></a>1.1.3 MicroSoft SQL Server设置</h3><ol><li>工具 &#x3D;&gt; 选项 &#x3D;&gt; 设计器 &#x3D;&gt; 表设计器和数据库设计器 &#x3D;&gt; 取消勾选”阻止保存要求重新创建表的更改”</li><li>工具 &#x3D;&gt; 选项 &#x3D;&gt; SQLserver对象资源管理器 &#x3D;&gt; 命令 &#x3D;&gt; 编辑前N行命令值, 将200修改为0</li></ol><h2 id="1-2-create-table-命令"><a href="#1-2-create-table-命令" class="headerlink" title="1.2 create table 命令"></a>1.2 create table 命令</h2><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>butterfly 更改顶图和背景</title>
       <link href="/posts/eb83d88e.html"/>
       <url>/posts/eb83d88e.html</url>
