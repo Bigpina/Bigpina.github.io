@@ -1,0 +1,406 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Verilog基础知识 | Bigpina' NoteBook</title><meta name="author" content="🍍大菠萝"><meta name="copyright" content="🍍大菠萝"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Verilog 知识整理文档1. 概述Verilog HDL（Hardware Description Language）是一种用于描述数字电路和系统的硬件描述语言。它支持从行为级到门级的多层次建模，广泛应用于 FPGA 和 ASIC 设计流程中。  2. 基本语法结构2.1 模块（Module）模块是 Verilog 的基本设计单元。 module module_name (    input">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Verilog基础知识">
+<meta property="og:url" content="http://bigpina.github.io/posts/fba39465.html">
+<meta property="og:site_name" content="Bigpina&#39; NoteBook">
+<meta property="og:description" content="Verilog 知识整理文档1. 概述Verilog HDL（Hardware Description Language）是一种用于描述数字电路和系统的硬件描述语言。它支持从行为级到门级的多层次建模，广泛应用于 FPGA 和 ASIC 设计流程中。  2. 基本语法结构2.1 模块（Module）模块是 Verilog 的基本设计单元。 module module_name (    input">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://bigpina.github.io/img/default.jpg">
+<meta property="article:published_time" content="2025-12-12T14:28:09.000Z">
+<meta property="article:modified_time" content="2025-12-30T12:50:49.265Z">
+<meta property="article:author" content="🍍大菠萝">
+<meta property="article:tag" content="FPGA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bigpina.github.io/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://bigpina.github.io/posts/fba39465.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Verilog基础知识',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-12-30 20:50:49'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">62</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/default.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Bigpina' NoteBook"><span class="site-name">Bigpina' NoteBook</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Verilog基础知识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-12T14:28:09.000Z" title="发表于 2025-12-12 22:28:09">2025-12-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-30T12:50:49.265Z" title="更新于 2025-12-30 20:50:49">2025-12-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1,056</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Verilog基础知识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Verilog-知识整理文档"><a href="#Verilog-知识整理文档" class="headerlink" title="Verilog 知识整理文档"></a>Verilog 知识整理文档</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><p>Verilog HDL（Hardware Description Language）是一种用于描述数字电路和系统的硬件描述语言。它支持从行为级到门级的多层次建模，广泛应用于 FPGA 和 ASIC 设计流程中。</p>
+<hr>
+<h2 id="2-基本语法结构"><a href="#2-基本语法结构" class="headerlink" title="2. 基本语法结构"></a>2. 基本语法结构</h2><h3 id="2-1-模块（Module）"><a href="#2-1-模块（Module）" class="headerlink" title="2.1 模块（Module）"></a>2.1 模块（Module）</h3><p>模块是 Verilog 的基本设计单元。</p>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">module</span> module_name (</span><br><span class="line">    <span class="keyword">input</span>  <span class="keyword">wire</span> clk,</span><br><span class="line">    <span class="keyword">input</span>  <span class="keyword">wire</span> rst_n,</span><br><span class="line">    <span class="keyword">output</span> <span class="keyword">reg</span>  data_out</span><br><span class="line">);</span><br><span class="line">    <span class="comment">// 内部逻辑</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>input</code> &#x2F; <code>output</code> &#x2F; <code>inout</code>：端口方向  </li>
+<li><code>wire</code>：连线型，默认类型  </li>
+<li><code>reg</code>：寄存器型，用于过程块（<code>always</code>）赋值</li>
+</ul>
+<h3 id="2-2-注释"><a href="#2-2-注释" class="headerlink" title="2.2 注释"></a>2.2 注释</h3><ul>
+<li>单行注释：<code>//</code></li>
+<li>多行注释：<code>/* ... */</code></li>
+</ul>
+<hr>
+<h2 id="3-数据类型"><a href="#3-数据类型" class="headerlink" title="3. 数据类型"></a>3. 数据类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>wire</code></td>
+<td>连线，用于连续赋值（<code>assign</code>）或模块连接</td>
+</tr>
+<tr>
+<td><code>reg</code></td>
+<td>寄存器变量，用于 <code>always</code> 块中保存状态</td>
+</tr>
+<tr>
+<td><code>integer</code></td>
+<td>32 位有符号整数</td>
+</tr>
+<tr>
+<td><code>real</code></td>
+<td>实数（仿真用，不可综合）</td>
+</tr>
+<tr>
+<td><code>parameter</code></td>
+<td>常量，常用于定义宽度、延迟等</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：<code>reg</code> 并不一定会生成寄存器，仅表示“可被赋值”的变量。</p>
+</blockquote>
+<hr>
+<h2 id="4-运算符"><a href="#4-运算符" class="headerlink" title="4. 运算符"></a>4. 运算符</h2><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>运算符示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>算术</td>
+<td><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></td>
+</tr>
+<tr>
+<td>位运算</td>
+<td><code>&amp;</code>, &#96;</td>
+</tr>
+<tr>
+<td>逻辑</td>
+<td><code>&amp;&amp;</code>, &#96;</td>
+</tr>
+<tr>
+<td>关系</td>
+<td><code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></td>
+</tr>
+<tr>
+<td>移位</td>
+<td><code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&lt;&lt;&lt;</code>, <code>&gt;&gt;&gt;</code>（算术右移）</td>
+</tr>
+<tr>
+<td>条件</td>
+<td><code>?:</code></td>
+</tr>
+<tr>
+<td>连接</td>
+<td><code>&#123; &#125;</code>（拼接）</td>
+</tr>
+<tr>
+<td>重复</td>
+<td><code>&#123;n&#123;a&#125;&#125;</code>（将 <code>a</code> 重复 <code>n</code> 次）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-赋值语句"><a href="#5-赋值语句" class="headerlink" title="5. 赋值语句"></a>5. 赋值语句</h2><h3 id="5-1-连续赋值（Continuous-Assignment）"><a href="#5-1-连续赋值（Continuous-Assignment）" class="headerlink" title="5.1 连续赋值（Continuous Assignment）"></a>5.1 连续赋值（Continuous Assignment）</h3><p>使用 <code>assign</code>，用于组合逻辑：</p>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">assign</span> y = a &amp; b;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-过程赋值（Procedural-Assignment）"><a href="#5-2-过程赋值（Procedural-Assignment）" class="headerlink" title="5.2 过程赋值（Procedural Assignment）"></a>5.2 过程赋值（Procedural Assignment）</h3><p>在 <code>always</code> 或 <code>initial</code> 块中使用：</p>
+<ul>
+<li><strong>阻塞赋值</strong> <code>=</code>：顺序执行，用于组合逻辑建模  </li>
+<li><strong>非阻塞赋值</strong> <code>&lt;=</code>：并行执行，用于时序逻辑建模</li>
+</ul>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk) <span class="keyword">begin</span></span><br><span class="line">    q &lt;= d;  <span class="comment">// 非阻塞，推荐用于时序逻辑</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">always</span> @(*) <span class="keyword">begin</span></span><br><span class="line">    y = a ^ b;  <span class="comment">// 阻塞，用于组合逻辑</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="6-控制结构"><a href="#6-控制结构" class="headerlink" title="6. 控制结构"></a>6. 控制结构</h2><h3 id="6-1-条件语句"><a href="#6-1-条件语句" class="headerlink" title="6.1 条件语句"></a>6.1 条件语句</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) <span class="keyword">begin</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">if</span> (...) <span class="keyword">begin</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-Case-语句"><a href="#6-2-Case-语句" class="headerlink" title="6.2 Case 语句"></a>6.2 Case 语句</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> (sel)</span><br><span class="line">    <span class="number">2&#x27;b00</span>: out = a;</span><br><span class="line">    <span class="number">2&#x27;b01</span>: out = b;</span><br><span class="line">    <span class="keyword">default</span>: out = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">endcase</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>case</code>：全等比较（<code>===</code> 不支持 X&#x2F;Z）  </li>
+<li><code>casex</code>：忽略 X&#x2F;Z  </li>
+<li><code>casez</code>：忽略 Z（常用）</li>
+</ul>
+<h3 id="6-3-循环语句（主要用于仿真或生成结构）"><a href="#6-3-循环语句（主要用于仿真或生成结构）" class="headerlink" title="6.3 循环语句（主要用于仿真或生成结构）"></a>6.3 循环语句（主要用于仿真或生成结构）</h3><ul>
+<li><code>for</code></li>
+<li><code>while</code></li>
+<li><code>repeat</code></li>
+<li><code>forever</code></li>
+</ul>
+<blockquote>
+<p>注意：可综合的 <code>for</code> 循环必须在编译时确定次数。</p>
+</blockquote>
+<hr>
+<h2 id="7-时序与敏感列表"><a href="#7-时序与敏感列表" class="headerlink" title="7. 时序与敏感列表"></a>7. 时序与敏感列表</h2><h3 id="7-1-敏感列表写法"><a href="#7-1-敏感列表写法" class="headerlink" title="7.1 敏感列表写法"></a>7.1 敏感列表写法</h3><ul>
+<li>组合逻辑：<code>always @(*)</code> 或列出所有输入信号  </li>
+<li>时序逻辑：<code>always @(posedge clk or negedge rst_n)</code></li>
+</ul>
+<h3 id="7-2-典型时序逻辑模板"><a href="#7-2-典型时序逻辑模板" class="headerlink" title="7.2 典型时序逻辑模板"></a>7.2 典型时序逻辑模板</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk <span class="keyword">or</span> <span class="keyword">negedge</span> rst_n) <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span> (!rst_n)</span><br><span class="line">        q &lt;= <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        q &lt;= d;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-典型组合逻辑模板"><a href="#7-3-典型组合逻辑模板" class="headerlink" title="7.3 典型组合逻辑模板"></a>7.3 典型组合逻辑模板</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">always</span> @(*) <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">case</span> (op)</span><br><span class="line">        <span class="number">2&#x27;b00</span>: y = a + b;</span><br><span class="line">        <span class="number">2&#x27;b01</span>: y = a - b;</span><br><span class="line">        <span class="keyword">default</span>: y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">endcase</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="8-模块实例化"><a href="#8-模块实例化" class="headerlink" title="8. 模块实例化"></a>8. 模块实例化</h2><h3 id="8-1-位置关联（不推荐）"><a href="#8-1-位置关联（不推荐）" class="headerlink" title="8.1 位置关联（不推荐）"></a>8.1 位置关联（不推荐）</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">and_gate u1 (out, a, b);</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-名称关联（推荐）"><a href="#8-2-名称关联（推荐）" class="headerlink" title="8.2 名称关联（推荐）"></a>8.2 名称关联（推荐）</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">and_gate u1 (</span><br><span class="line">    <span class="variable">.out</span>(out),</span><br><span class="line">    <span class="variable">.in1</span>(a),</span><br><span class="line">    <span class="variable">.in2</span>(b)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="9-系统任务与函数（仿真用）"><a href="#9-系统任务与函数（仿真用）" class="headerlink" title="9. 系统任务与函数（仿真用）"></a>9. 系统任务与函数（仿真用）</h2><ul>
+<li><code>$display(&quot;Hello&quot;)</code>：打印信息  </li>
+<li><code>$monitor</code>：监控信号变化  </li>
+<li><code>$time</code>：获取仿真时间  </li>
+<li><code>$finish</code>：结束仿真  </li>
+<li><code>$random</code>：生成随机数</li>
+</ul>
+<blockquote>
+<p>这些不可综合，仅用于测试平台（testbench）。</p>
+</blockquote>
+<hr>
+<h2 id="10-Testbench-编写要点"><a href="#10-Testbench-编写要点" class="headerlink" title="10. Testbench 编写要点"></a>10. Testbench 编写要点</h2><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">module</span> tb;</span><br><span class="line">    <span class="keyword">reg</span> clk, rst_n;</span><br><span class="line">    <span class="keyword">wire</span> data_out;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 实例化 DUT</span></span><br><span class="line">    my_module dut (<span class="variable">.clk</span>(clk), <span class="variable">.rst_n</span>(rst_n), <span class="variable">.data_out</span>(data_out));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 时钟生成</span></span><br><span class="line">    <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">        clk = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">forever</span> #<span class="number">5</span> clk = ~clk;  <span class="comment">// 10ns 周期</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 测试激励</span></span><br><span class="line">    <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">        rst_n = <span class="number">0</span>;</span><br><span class="line">        #<span class="number">20</span> rst_n = <span class="number">1</span>;</span><br><span class="line">        #<span class="number">100</span> <span class="built_in">$finish</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="11-可综合性规则（重要！）"><a href="#11-可综合性规则（重要！）" class="headerlink" title="11. 可综合性规则（重要！）"></a>11. 可综合性规则（重要！）</h2><ul>
+<li>避免使用 <code>initial</code>（除 testbench）  </li>
+<li>避免使用 <code>#delay</code>  </li>
+<li><code>always</code> 块中：<ul>
+<li>组合逻辑用阻塞赋值（<code>=</code>）</li>
+<li>时序逻辑用非阻塞赋值（<code>&lt;=</code>）</li>
+</ul>
+</li>
+<li>避免锁存器（latch）：确保 <code>if</code>&#x2F;<code>case</code> 有 <code>else</code>&#x2F;<code>default</code>  </li>
+<li>循环次数必须为常量  </li>
+<li>不支持实数、动态数组等不可综合结构</li>
+</ul>
+<hr>
+<h2 id="12-常见陷阱与建议"><a href="#12-常见陷阱与建议" class="headerlink" title="12. 常见陷阱与建议"></a>12. 常见陷阱与建议</h2><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>产生 latch</td>
+<td>所有条件分支都要赋值</td>
+</tr>
+<tr>
+<td>时序违例</td>
+<td>使用同步设计，避免异步逻辑</td>
+</tr>
+<tr>
+<td>信号竞争</td>
+<td>使用非阻塞赋值处理时序逻辑</td>
+</tr>
+<tr>
+<td>未初始化 reg</td>
+<td>在复位中明确初始值</td>
+</tr>
+<tr>
+<td>敏感列表遗漏</td>
+<td>使用 <code>@(*)</code> 自动推导</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="13-扩展：Verilog-2001-vs-Verilog-1995"><a href="#13-扩展：Verilog-2001-vs-Verilog-1995" class="headerlink" title="13. 扩展：Verilog-2001 vs Verilog-1995"></a>13. 扩展：Verilog-2001 vs Verilog-1995</h2><ul>
+<li>Verilog-2001 支持：<ul>
+<li><code>@(*)</code></li>
+<li>ANSI C 风格端口声明（如 <code>input wire clk</code> 直接在端口列表中定义）</li>
+<li>多维数组（有限支持）</li>
+<li><code>generate</code> 语句（用于参数化结构）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Verilog-2001 风格</span></span><br><span class="line"><span class="keyword">module</span> adder #(<span class="keyword">parameter</span> WIDTH=<span class="number">8</span>) (</span><br><span class="line">    <span class="keyword">input</span>  [WIDTH-<span class="number">1</span>:<span class="number">0</span>] a, b,</span><br><span class="line">    <span class="keyword">output</span> [WIDTH-<span class="number">1</span>:<span class="number">0</span>] sum</span><br><span class="line">);</span><br><span class="line">    <span class="keyword">assign</span> sum = a + b;</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="14-学习资源推荐"><a href="#14-学习资源推荐" class="headerlink" title="14. 学习资源推荐"></a>14. 学习资源推荐</h2><ul>
+<li>书籍：《Verilog 数字系统设计教程》（夏宇闻）  </li>
+<li>工具：ModelSim（仿真）、Vivado&#x2F;Quartus（综合与实现）  </li>
+<li>在线：EDA Playground（在线仿真）</li>
+</ul>
+<hr>
+<blockquote>
+<p>如有需要，可进一步提供：  </p>
+<ul>
+<li>常见电路（计数器、状态机、FIFO）的 Verilog 实现  </li>
+<li>SystemVerilog 与 Verilog 对比  </li>
+<li>可综合编码规范（如 CDC、低功耗设计）</li>
+</ul>
+</blockquote>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://bigpina.github.io">🍍大菠萝</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://bigpina.github.io/posts/fba39465.html">http://bigpina.github.io/posts/fba39465.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://bigpina.github.io" target="_blank">Bigpina' NoteBook</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/FPGA/">FPGA</a></div><div class="post_share"><div class="social-share" data-image="/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/74c3123c.html" title="时序逻辑和组合逻辑"><img class="cover" src="/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">时序逻辑和组合逻辑</div></div></a></div><div class="next-post pull-right"><a href="/posts/e378b809.html" title="局域网内手机与PC互传文件"><img class="cover" src="/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">局域网内手机与PC互传文件</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/9e1ee9c2.html" title="IP核"><img class="cover" src="/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-28</div><div class="title">IP核</div></div></a></div><div><a href="/posts/3c314716.html" title="Vivado和ModelSim联合仿真"><img class="cover" src="/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-29</div><div class="title">Vivado和ModelSim联合仿真</div></div></a></div><div><a href="/posts/94b3b094.html" title="Xilinx常用"><img class="cover" src="/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-30</div><div class="title">Xilinx常用</div></div></a></div><div><a href="/posts/74c3123c.html" title="时序逻辑和组合逻辑"><img class="cover" src="/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-14</div><div class="title">时序逻辑和组合逻辑</div></div></a></div><div><a href="/posts/96766df8.html" title="Xilinx在线调试"><img class="cover" src="/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-24</div><div class="title">Xilinx在线调试</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">🍍大菠萝</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">62</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Verilog-%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E6%96%87%E6%A1%A3"><span class="toc-text">Verilog 知识整理文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1. 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-text">2. 基本语法结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%A8%A1%E5%9D%97%EF%BC%88Module%EF%BC%89"><span class="toc-text">2.1 模块（Module）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-text">2.2 注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">3. 数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">4. 运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5"><span class="toc-text">5. 赋值语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E8%BF%9E%E7%BB%AD%E8%B5%8B%E5%80%BC%EF%BC%88Continuous-Assignment%EF%BC%89"><span class="toc-text">5.1 连续赋值（Continuous Assignment）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E8%BF%87%E7%A8%8B%E8%B5%8B%E5%80%BC%EF%BC%88Procedural-Assignment%EF%BC%89"><span class="toc-text">5.2 过程赋值（Procedural Assignment）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84"><span class="toc-text">6. 控制结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">6.1 条件语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-Case-%E8%AF%AD%E5%8F%A5"><span class="toc-text">6.2 Case 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%EF%BC%88%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E4%BB%BF%E7%9C%9F%E6%88%96%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84%EF%BC%89"><span class="toc-text">6.3 循环语句（主要用于仿真或生成结构）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%97%B6%E5%BA%8F%E4%B8%8E%E6%95%8F%E6%84%9F%E5%88%97%E8%A1%A8"><span class="toc-text">7. 时序与敏感列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E6%95%8F%E6%84%9F%E5%88%97%E8%A1%A8%E5%86%99%E6%B3%95"><span class="toc-text">7.1 敏感列表写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%85%B8%E5%9E%8B%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%E6%A8%A1%E6%9D%BF"><span class="toc-text">7.2 典型时序逻辑模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E5%85%B8%E5%9E%8B%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E6%A8%A1%E6%9D%BF"><span class="toc-text">7.3 典型组合逻辑模板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%A8%A1%E5%9D%97%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="toc-text">8. 模块实例化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E4%BD%8D%E7%BD%AE%E5%85%B3%E8%81%94%EF%BC%88%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-text">8.1 位置关联（不推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E5%90%8D%E7%A7%B0%E5%85%B3%E8%81%94%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-text">8.2 名称关联（推荐）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E7%B3%BB%E7%BB%9F%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%87%BD%E6%95%B0%EF%BC%88%E4%BB%BF%E7%9C%9F%E7%94%A8%EF%BC%89"><span class="toc-text">9. 系统任务与函数（仿真用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Testbench-%E7%BC%96%E5%86%99%E8%A6%81%E7%82%B9"><span class="toc-text">10. Testbench 编写要点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%8F%AF%E7%BB%BC%E5%90%88%E6%80%A7%E8%A7%84%E5%88%99%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%81%EF%BC%89"><span class="toc-text">11. 可综合性规则（重要！）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-text">12. 常见陷阱与建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E6%89%A9%E5%B1%95%EF%BC%9AVerilog-2001-vs-Verilog-1995"><span class="toc-text">13. 扩展：Verilog-2001 vs Verilog-1995</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90"><span class="toc-text">14. 学习资源推荐</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/94b3b094.html" title="Xilinx常用"><img src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Xilinx常用"/></a><div class="content"><a class="title" href="/posts/94b3b094.html" title="Xilinx常用">Xilinx常用</a><time datetime="2025-12-30T14:00:26.000Z" title="发表于 2025-12-30 22:00:26">2025-12-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3c314716.html" title="Vivado和ModelSim联合仿真"><img src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vivado和ModelSim联合仿真"/></a><div class="content"><a class="title" href="/posts/3c314716.html" title="Vivado和ModelSim联合仿真">Vivado和ModelSim联合仿真</a><time datetime="2025-12-29T13:50:42.000Z" title="发表于 2025-12-29 21:50:42">2025-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9e1ee9c2.html" title="IP核"><img src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IP核"/></a><div class="content"><a class="title" href="/posts/9e1ee9c2.html" title="IP核">IP核</a><time datetime="2025-12-28T14:28:46.000Z" title="发表于 2025-12-28 22:28:46">2025-12-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/96766df8.html" title="Xilinx在线调试"><img src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Xilinx在线调试"/></a><div class="content"><a class="title" href="/posts/96766df8.html" title="Xilinx在线调试">Xilinx在线调试</a><time datetime="2025-12-24T14:15:19.000Z" title="发表于 2025-12-24 22:15:19">2025-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/74c3123c.html" title="时序逻辑和组合逻辑"><img src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="时序逻辑和组合逻辑"/></a><div class="content"><a class="title" href="/posts/74c3123c.html" title="时序逻辑和组合逻辑">时序逻辑和组合逻辑</a><time datetime="2025-12-14T14:15:14.000Z" title="发表于 2025-12-14 22:15:14">2025-12-14</time></div></div></div></div></div></div></main><footer id="footer" style="background: white"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2026 By 🍍大菠萝</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><div class="fb-customerchat" id="fb-customer-chat" attribution="biz_inbox"></div><script>(() => {
+  document.getElementById('fb-root') ? '' : document.body.insertAdjacentHTML('afterend', '<div id="fb-root"></div>')
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml: true,
+      version: 'v16.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/zh_CN/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  const isChatBtn = false
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    window.chatBtnFn = () => {
+      const isShow = document.querySelector('.fb_customer_chat_bounce_in_v2')
+      isShow ? FB.CustomerChat.hide() : FB.CustomerChat.show()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        FB.CustomerChat.hide()
+      },
+      show: () => {
+        FB.CustomerChat.show(false)
+      }
+    }
+  }
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
